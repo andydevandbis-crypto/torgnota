@@ -1,0 +1,497 @@
+[
+  {
+    "produkt": "Färsk fläskkarré",
+    "pris": 69.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kycklinglårfilé Kronfågel",
+    "pris": 109,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "77:86/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Satsumas",
+    "pris": 20,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Skärgårdsskaka Hönö Pågen",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "33:33/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Svenskt smör Arla",
+    "pris": 45,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "90:00/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kassler Skånemejerier",
+    "pris": 69.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Sprödbakad torskfilé Coop",
+    "pris": 89,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "123:61/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Lösvektsgodis",
+    "pris": 74.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "103:15-109:00/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ost Wästgöta Kloster",
+    "pris": 89,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Fläsklägg Dalsjöfors",
+    "pris": 49.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Färsk nötytterfilé Nybergs Deli",
+    "pris": 169,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Bacon/stekfläsk Tulip",
+    "pris": 28,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "93:33-127:27/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Stekfläsk Tulip",
+    "pris": 109,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Rökt skinka Tulip",
+    "pris": 45,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "128:57/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Minutkyckling Kronfågel",
+    "pris": 75,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "125-136:36/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Lammfärs i rulle Scan",
+    "pris": 74.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "187:25/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Färsk pasta Coop",
+    "pris": 49,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "49-98:00/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Paprikamix 3-pack Coop",
+    "pris": 22,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "55:00/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Champinjoner i ask Coop",
+    "pris": 30,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "60:00/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Romansallat",
+    "pris": 12,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "48:00/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Äpplen Aroma Sverige",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologisk sallad i påse Änglamark",
+    "pris": 26,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "200:00/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Rosor 9-pack Fairtrade",
+    "pris": 69.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": null,
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Klassikerost Arla",
+    "pris": 85,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Matlagnings-/vispgrädde Arla Köket",
+    "pris": 22,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "44:00/liter",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ketchup Felix",
+    "pris": 55,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "27:50-28:06/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Snacks OLW",
+    "pris": 65,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "78:79-108:33/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Nötter OLW",
+    "pris": 35,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "58:33-116:67/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Riven ost Arla Köket",
+    "pris": 20,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "133:33/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kycklingsteak Kronfågel",
+    "pris": 89,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pizzadeg Napoli Popi Bakery",
+    "pris": 39,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "65:00/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pizzadeg Napoli XXL Popi Bakery",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "50:00/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Mjukost i ask Kavli",
+    "pris": 69,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "104:55/kg",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Mjukost i tub Kavli",
+    "pris": 95,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "115:15-137:68/kg",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kvarg Lindahls",
+    "pris": 17,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "56:67/kg",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Proteindryck Ehrmann",
+    "pris": 35,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "53:03/liter",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologisk bärdryck Finnerödja",
+    "pris": 55,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "27:50/liter",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Smörgåspålägg Svea",
+    "pris": 45,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "150:00/kg",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Bordsmargarin Becel/Flora",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "41:67-50:00/kg",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Bröd Bonjour",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "46:30-55:56/kg",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Havregryn Sverige/Coop",
+    "pris": 15,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "10:00/kg",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ingefärsshot Coop",
+    "pris": 52,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "104:00/liter",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Tunnbröd Sverige/Coop",
+    "pris": 15,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "40:00/kg",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Mjukt bröd Fazer",
+    "pris": 23.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "59:75-66:39/kg",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Läsk 4-pack Coca-Cola/Fanta",
+    "pris": 99,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "8:25/liter + pant",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kakor Marabou",
+    "pris": 49,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "133:15-185:61/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Energidryck Nocco",
+    "pris": 30,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "42:25-45:45/liter + pant",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Chokladkaka Ferrero Rocher",
+    "pris": 42,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "233:33/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Grädde Kelda",
+    "pris": 20,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "40:00/liter",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Sås 3-pack Blå Band",
+    "pris": 39,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "144:44-254:90/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Salsa/tortillas El Taco Truck",
+    "pris": 35,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "70-81:40/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologiska russin Saltå Kvarn",
+    "pris": 48,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "96:00/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Vätskeersättning Resorb",
+    "pris": 42,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "2:10/st",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Färdigrätter Felix",
+    "pris": 75,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": null,
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pizza Ristorante Dr. Oetker",
+    "pris": 79,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": null,
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  }
+]

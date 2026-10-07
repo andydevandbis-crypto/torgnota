@@ -1,0 +1,712 @@
+[
+  {
+    "produkt": "Lövbiff av innanlår",
+    "pris": 219,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Färsk kycklingbröstfilé Kronfågel",
+    "pris": 99,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "110:00/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Kaffe Skånerost Zoegas",
+    "pris": 35,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "77:78/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Liten Sirapsslimpa ICA Selection",
+    "pris": 15,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "25:00/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Manuella fiskdisken",
+    "pris": 159,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Manuella delidisk grillat i butiken",
+    "pris": 29.9,
+    "antal": 1,
+    "enhet": "hg",
+    "jamforpris": null,
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Satsumas",
+    "pris": 20,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Åtmogen kiwi 3-pack ICA",
+    "pris": 20,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "60:61/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Päron Conference ICA",
+    "pris": 23,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Svenska äpplen ICA",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Svensk vitkål",
+    "pris": 10,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Nyskördade morötter i påse ICA",
+    "pris": 10,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "10:00/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Babylommontomater i ask ICA",
+    "pris": 30,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "60:00/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Grönkålsblad i påse ICA",
+    "pris": 20,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "50:00/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Cashewnötter ICA Gott Liv",
+    "pris": 59,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "118:00/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Färsk pasta fettuccine ICA",
+    "pris": 30,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "40:00/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Avfallspåse ICA",
+    "pris": 45,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "0:75/st",
+    "sida": 3,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Handskalade räkor ICA",
+    "pris": 79,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "282:14/kg utan spad",
+    "sida": 3,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Avokado i nät ICA",
+    "pris": 35,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "50:00/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Torskrygg Norway Seafoods",
+    "pris": 260,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "260:00/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Lantbröd Fazer",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "41:67/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Juice, ekologisk juice God Morgon",
+    "pris": 50,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "29:41/liter + pant",
+    "sida": 4,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Fläskfärs",
+    "pris": 59,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "59:00/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Kassler ICA",
+    "pris": 79,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 4,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Grillkorv Scan",
+    "pris": 35,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "54:69-72:92/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Högrev",
+    "pris": 179,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Ekologiska hamburgare ICA I love eco",
+    "pris": 39,
+    "antal": 1,
+    "enhet": "förp",
+    "jamforpris": "172:57/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Benfri fläsklägg",
+    "pris": 59,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Paj Familjen Dafgård",
+    "pris": 75,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "104:17/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Korvbröd surdeg ICA",
+    "pris": 28,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "46:67/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Sverige-/Fullkornspasta Kungsörnen",
+    "pris": 40,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "26:67-29:63/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Bacon Tulip",
+    "pris": 25,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "100:00-125:00/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Färska portionsrätter Gooh",
+    "pris": 99,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "123:75-133:78/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Ägg 10-pack ICA",
+    "pris": 40,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "2:00/st",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Hushållsost Präst/Herrgård/Grevé/SVECIA/DACKE",
+    "pris": 89.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Rosta bröd Pågen",
+    "pris": 28,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "31:11/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Iste Löfbergs",
+    "pris": 45,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "65:22/liter",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Pålägg Vegan Quorn",
+    "pris": 39,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "195:00/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Bordsmargarin Becel/Flora",
+    "pris": 25.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "43:17-51:80/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Påläggschark Charkuterifabriken",
+    "pris": 29.9,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "99:67-149:50/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Granola Finax",
+    "pris": 99,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "88:00/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Barista Havredryck Oddlygood",
+    "pris": 45,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "15:00/liter",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Drickkvarg Lindahls",
+    "pris": 25,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "37:88-50:00/liter",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Laktosfri vanilj-, fruktyoghurt Valio",
+    "pris": 22.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "22:90/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Kaffe Löfbergs",
+    "pris": 155,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "114:81/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Stekpanna 28 cm Köksträdgården",
+    "pris": 149.5,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": null,
+    "sida": 7,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Äppelmust Kiviks Musteri",
+    "pris": 48,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "24:00/liter",
+    "sida": 7,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Maskindiskmedel Yes",
+    "pris": 95,
+    "antal": 1,
+    "enhet": "förp",
+    "jamforpris": "1:98-2:50/disk",
+    "sida": 7,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Snacks Estrella",
+    "pris": 30,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "166:67-187:50/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Mer Smak Vatten Ramlösa",
+    "pris": 30,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "10:00/liter + pant",
+    "sida": 8,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Cider Somersby",
+    "pris": 30,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "30:30/liter",
+    "sida": 8,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Schampo Dove",
+    "pris": 99,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "147:50/liter",
+    "sida": 8,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Handdiskmedel YES Platinum",
+    "pris": 59,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "56:73-65:56/liter",
+    "sida": 8,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Läsk Coca-Cola/Fanta",
+    "pris": 29,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "15:00/liter + pant",
+    "sida": 9,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Chips Gårdschips",
+    "pris": 36,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "120:00/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Halstabletter Myntheon",
+    "pris": 25,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "416:67/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Chokladbitar Marabou",
+    "pris": 70,
+    "antal": 10,
+    "enhet": "för",
+    "jamforpris": "116:67-189:19/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Chokladkaka Lindt",
+    "pris": 60,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "300:00/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Salami Kotivara",
+    "pris": 22,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "183:33-275:00/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Energidryck Red Bull",
+    "pris": 22,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "44:00/liter + pant",
+    "sida": 9,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Hälsofil Verum",
+    "pris": 38,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "19:00/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Ekologiska Havregryn Saltå Kvarn",
+    "pris": 40,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "30:77/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Dessertost Castello",
+    "pris": 50,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "166:67/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Vete- Rågkaka ICA",
+    "pris": 22,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "24:44/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Socka Quick Dry ICA",
+    "pris": 35,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "17:50/st",
+    "sida": 10,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Rengöringsspray ICA Skona",
+    "pris": 40,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "26:67/liter",
+    "sida": 10,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Städservetter ICA",
+    "pris": 25,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "0:18-0:62/st",
+    "sida": 10,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Tandborste, barntandkräm Jordan",
+    "pris": 30,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "300:00/liter",
+    "sida": 10,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Handdiskmedel ICA",
+    "pris": 22,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "22:00/liter",
+    "sida": 10,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Flytande tvättmedel ICA Skona",
+    "pris": 45,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "0:98-1:07/tvätt",
+    "sida": 10,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  },
+  {
+    "produkt": "Ekologisk gourmetpotatis i påse ICA I love eco",
+    "pris": 17,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "18:89/kg",
+    "sida": 10,
+    "giltig": "5–11 oktober",
+    "butik": "ICA Kvantum Brunnshög"
+  }
+]

@@ -1,0 +1,12 @@
+﻿# Torgnota - Inköpslista med aktuella erbjudanden
+# Repo: https://github.com/andydevandbis-crypto/torgnota
+services:
+  - type: web
+    name: torgnota
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn server_sida:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: ADMIN_PASSWORD
+        sync: false

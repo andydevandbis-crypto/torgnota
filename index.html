@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torgnota</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%230f766e'/%3E%3Cpath d='M6 7h2l2 8h8l2-6H8' stroke='white' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='10' cy='18' r='1.5' fill='white'/%3E%3Ccircle cx='16' cy='18' r='1.5' fill='white'/%3E%3C/svg%3E">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", -apple-system, sans-serif; background: #f1f5f9; color: #0f172a; min-height: 100vh; font-size: 16px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.page { display: none; }
+.page.active { display: block; }
+
+.start { padding: 60px 24px; text-align: center; max-width: 520px; margin: 0 auto; }
+.start .emoji-big { font-size: 48px; margin-bottom: 8px; }
+.start h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+.start .sub { color: #334155; font-size: 16px; margin-bottom: 28px; }
+.btn-erbjudanden { width: 100%; padding: 16px; background: #0f766e; color: #fff; border: none; border-radius: 12px; font-size: 17px; font-weight: 600; cursor: pointer; margin-bottom: 20px; }
+.btn-erbjudanden:hover { background: #0d5f58; }
+.new-list-box { background: #fff; border: 2px solid #0f766e; border-radius: 12px; padding: 16px; margin-bottom: 28px; text-align: left; }
+.new-list-box input { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 16px; outline: none; margin-bottom: 10px; }
+.new-list-box input:focus { border-color: #0f766e; }
+.new-list-box button { width: 100%; padding: 12px; background: #0f766e; color: #fff; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; }
+.new-list-box button:hover { background: #0d5f58; }
+.saved-lists { text-align: left; }
+.saved-lists .label { font-size: 14px; font-weight: 600; color: #334155; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+.saved-list-item { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 14px 16px; border-radius: 10px; margin-bottom: 8px; cursor: pointer; border: 1px solid #cbd5e1; }
+.saved-list-item:hover { border-color: #0f766e; }
+.saved-list-item .name { font-size: 16px; font-weight: 500; flex: 1; }
+.saved-list-item .del-btn { background: none; border: none; color: #64748b; font-size: 20px; cursor: pointer; padding: 4px 8px; }
+.saved-list-item .del-btn:hover { color: #dc2626; }
+.empty-lists { color: #475569; font-size: 15px; text-align: center; padding: 20px 0; }
+
+.topbar { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.back-btn { font-size: 24px; background: none; border: none; cursor: pointer; padding: 8px 12px; border-radius: 8px; }
+.back-btn:hover { background: #e2e8f0; }
+.topbar h2 { font-size: 24px; font-weight: 700; flex: 1; }
+.del-list-btn { background: none; border: none; color: #64748b; font-size: 22px; cursor: pointer; padding: 8px; }
+.del-list-btn:hover { color: #dc2626; }
+
+.omrade-piller { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 20px; }
+.omrade-piller button { padding: 10px 4px; border: 2px solid #cbd5e1; background: #fff; border-radius: 16px; font-size: 11px; cursor: pointer; font-weight: 600; color: #0f172a; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.omrade-piller button.active { background: #0f766e; color: #fff; border-color: #0f766e; }
+
+.kat-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 16px; }
+.kat-knapp { padding: 8px 12px; background: #fff; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; text-align: center; transition: all .15s; }
+.kat-knapp:hover { border-color: #0f766e; }
+.kat-knapp.active { background: #0f766e; color: #fff; border-color: #0f766e; }
+.kat-knapp .namn { font-size: 13px; font-weight: 600; line-height: 1.2; }
+.kat-knapp .antal { font-size: 11px; color: #475569; margin-top: 2px; }
+.kat-knapp.active .antal { color: rgba(255,255,255,0.85); }
+
+.erbjudande-lista { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+.erbjudande { padding: 16px 20px; background: #fff; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.erbjudande:hover { border-color: #0f766e; background: #f0fdfa; }
+.erbjudande .info { flex: 1; min-width: 0; }
+.erbjudande .namn { font-size: 17px; font-weight: 600; line-height: 1.3; }
+.erbjudande .meta { font-size: 15px; color: #0f172a; margin-top: 4px; line-height: 1.4; }
+.erbjudande .pris { font-size: 20px; font-weight: 700; white-space: nowrap; color: #0f766e; }
+
+.botten-nav { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 20px 0; margin-bottom: 24px; }
+.botten-nav.hidden { display: none; }
+.nav-pil { padding: 14px 24px; background: #0f766e; color: #fff; border: none; border-radius: 10px; font-size: 20px; font-weight: 700; cursor: pointer; }
+.nav-pil:hover { background: #0d5f58; }
+.nav-kat { font-size: 16px; font-weight: 600; color: #0f172a; min-width: 140px; text-align: center; }
+
+.tomt { text-align: center; padding: 60px 20px; color: #475569; font-size: 16px; }
+
+.add-toggle { background: #fff; border: 2px solid #e2e8f0; border-radius: 12px; padding: 14px 20px; margin-bottom: 16px; cursor: pointer; font-weight: 600; font-size: 16px; }
+.add-toggle:hover { border-color: #0f766e; }
+.add-section { background: #fff; border: 2px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 16px; display: none; }
+.add-section.open { display: block; }
+.add-section input, .add-section select { width: 100%; padding: 12px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 16px; margin-bottom: 10px; outline: none; }
+.add-section input:focus, .add-section select:focus { border-color: #0f766e; }
+.add-section .btn-add { width: 100%; padding: 12px; background: #0f766e; color: #fff; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; }
+.add-section .btn-add:hover { background: #0d5f58; }
+.category { background: #fff; border: 2px solid #e2e8f0; border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+.category.complete { border-color: #0f766e; }
+.category-header { padding: 16px 20px; font-weight: 600; font-size: 17px; cursor: pointer; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; }
+.category-items { padding: 8px 16px 16px 16px; display: none; }
+.category-items.open { display: block; }
+.item { display: flex; align-items: center; gap: 12px; padding: 10px 8px; border-radius: 8px; }
+.item input[type="checkbox"] { width: 24px; height: 24px; accent-color: #0f766e; cursor: pointer; flex-shrink: 0; }
+.item .qty { background: #f1f5f9; padding: 3px 10px; border-radius: 6px; font-size: 14px; color: #0f172a; }
+.item .name { flex: 1; font-size: 17px; }
+.item .name.done { text-decoration: line-through; color: #64748b; }
+.item .delete-btn { background: none; border: none; color: #64748b; font-size: 20px; cursor: pointer; padding: 4px; }
+.item .delete-btn:hover { color: #dc2626; }
+.item.done-item { background: #f0fdfa; }
+.empty-state { text-align: center; padding: 60px 20px; color: #475569; font-size: 16px; }
+
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: #0f766e; color: #fff; padding: 14px 26px; border-radius: 30px; font-size: 16px; font-weight: 600; box-shadow: 0 8px 24px rgba(0,0,0,0.2); transition: transform .25s; z-index: 9999; }
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+@media (max-width: 768px) {
+  .container { padding: 16px; }
+  .kat-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .kat-knapp { padding: 8px 6px; }
+  .kat-knapp .namn { font-size: 12px; line-height: 1.15; }
+  .kat-knapp .antal { font-size: 10px; }
+  .erbjudande { padding: 12px; }
+  .erbjudande .namn { font-size: 15px; }
+  .erbjudande .pris { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="page active" id="startPage">
+    <div class="start">
+      <div class="emoji-big">🛒</div>
+      <h1>Torgnota</h1>
+      <p class="sub">Skapa eller redigera en lista</p>
+      <button class="btn-erbjudanden" onclick="visaErbjudanden()">Aktuella erbjudanden</button>
+      <div class="new-list-box">
+        <input type="text" id="newListName" placeholder="Skriv listans namn...">
+        <button onclick="skapaNyLista()">Skapa lista</button>
+      </div>
+      <div class="saved-lists">
+        <div class="label">Aktuella listor</div>
+        <div id="savedListsContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="offerPage">
+    <div class="topbar">
+      <button class="back-btn" onclick="tillbaka()">&#8592;</button>
+      <h2>Aktuella erbjudanden</h2>
+    </div>
+    <div class="omrade-piller" id="omradePiller"></div>
+    <div class="kat-grid" id="katGrid"></div>
+    <div class="erbjudande-lista" id="erbjudandeLista"></div>
+    <div class="botten-nav hidden" id="bottenNav"></div>
+    <div class="tomt" id="tomtMeddelande" style="display:none">Välj en kategori ovan.</div>
+  </div>
+
+  <div class="page" id="shopPage">
+    <div class="topbar">
+      <button class="back-btn" onclick="tillbaka()">&#8592;</button>
+      <h2 id="shopTitle">Min lista</h2>
+      <button class="del-list-btn" onclick="raderaLista()">&#10005;</button>
+    </div>
+    <div class="add-toggle" onclick="vaxlaLaggTill()">+ Ny vara</div>
+    <div class="add-section" id="addSection">
+      <input type="text" id="newItemInput" placeholder="Skriv vara...">
+      <input type="text" id="qtyInput" placeholder="Antal: 1 st" value="1 st">
+      <select id="categorySelect"><option value="">Välj kategori...</option></select>
+      <button class="btn-add" onclick="laggTillVara()">Lägg till</button>
+    </div>
+    <div id="categoriesContainer"></div>
+    <div class="empty-state" id="emptyState">Inga varor i den här listan än.</div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+let KATEGORIER = [];
+const NYCKELORD = {
+  "Hushåll": ["diskmedel","maskindiskmedel","avfallspåse","fryspåse","plastpåse","hushållsduk","städservett","skrubb","rengöring","toalettpapper","hushållspapper","tvättmedel","sköljmedel"],
+  "Kök": ["stekpanna","kastrull","kniv","skärbräda","matförvaring","köksredskap","grytlapp","förkläde","skål","dricksglas"],
+  "Chark & Pålägg": ["skinka","skinkstek","bacon","prosciutto","pancetta","chark","salami","fuet","pastej","leverpastej","smörgåspålägg","pålägg","kalkon","wienerkorv","grillkorv","stekfläsk"],
+  "Kött & Fisk": ["kött","köttfärs","blandfärs","fläsk","fläskfilé","fläskfärs","fläskytterfilé","fläskkarré","grytbitar","biff","pepparbiff","kotlett","schnitzel","kyckling","kycklingsteak","kebab","nuggets","burgare","korv","fisk","torsk","lax","räkor","köttbullar","cevapcici","fransyska","kalvfärs","lammracks","pulled"],
+  "Dryck": ["läsk","juice","kaffe","kaffebönor","ikaffe","energidryck","fruktdryck","must","äppelmust","vatten","öl","vin","saft","pellegrino","cola","coca"],
+  "Bröd & Bageri": ["bröd","polarbröd","polarpärlan","kaka","kakor","bulle","tortilla","tacos","kex","twist","knäcke","ciabatta","pizzadeg","pannkakor","pane","lingongrova","guldkorn","jubileumsbröd"],
+  "Fryst": ["fryst","glass","pizza","grandiosa","enportion","matpaj","färdigrätt"],
+  "Skafferi": ["pasta","ris","sås","såser","soppa","olja","rapsolja","olivolja","protein","profeel","milkshake","pudding","mousse","hummus","ketchup","vetemjöl","mjöl","pesto","agave","matvete","gräddsås","müsli","flingor","honung","sirap","sylt","krossade","passerade","gnocchi"],
+  "Snacks & Godis": ["chips","cochips","popcorn","snacks","nötter","choklad","godis","snickers","mars","bounty","twix","tuggummi","bars","proteinbars","kondisrullar","toffifee","nutella","smash","bilar"],
+  "Mejeri & Ost": ["mjölk","mjölkdryck","laktosfri","yoghurt","kefir","grädde","gräddfil","smör","margarin","ost","hårdost","hushållsost","klassikerost","mozzarella","ägg","kvarg","filmjölk","havregott","gårdsgoda","creme"],
+  "Frukt & Grönt": ["äpple","äpplen","banan","tomat","tomater","gurka","paprika","sallad","morot","morötter","palsternacka","potatis","sötpotatis","lök","plommon","avokado","satsumas","frukt","kaktus","pumpa","broccoli","brysselkål","champinjon","surkål","betor","krydd","kryddor","druvor"]
+};
+
+let erbjudanden = [], valdKategori = null, valdaOmraden = new Set(), adminKategorier = {};
+
+function normalisera(s) { return s.toLowerCase().trim().replace(/\s+/g, " "); }
+
+function kategorisera(produkt) {
+  const key = normalisera(produkt);
+  if (adminKategorier[key]) return adminKategorier[key];
+  const ord = key.split(/[\s,.\-&()\/:]+/).filter(w => w.length > 0);
+  for (const [kat, nyckelord] of Object.entries(NYCKELORD)) {
+    for (const nk of nyckelord) {
+      for (const o of ord) {
+        if (o === nk || o.startsWith(nk)) return kat;
+        if (nk.length >= 5 && o.includes(nk)) return kat;
+      }
+    }
+  }
+  return "Övrigt";
+}
+
+function visaToast(text) {
+  const t = document.getElementById("toast");
+  t.textContent = text;
+  t.classList.add("show");
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => t.classList.remove("show"), 1800);
+}
+
+function matchaListnamn(butik) {
+  const ord = normalisera(butik).split(" ").sort().join(" ");
+  for (const namn of Object.keys(allLists)) {
+    if (normalisera(namn).split(" ").sort().join(" ") === ord) return namn;
+  }
+  return butik;
+}
+
+async function laddaErbjudanden() {
+  try {
+    const res = await fetch("/api/data");
+    const d = await res.json();
+    adminKategorier = d.categories.assignments || {};
+    KATEGORIER = d.categories.categories || [];
+    erbjudanden = d.items.map(p => ({ ...p, kategori: kategorisera(p.produkt) }));
+  } catch (e) { erbjudanden = []; }
+}
+
+async function visaErbjudanden() {
+  visaSida("offerPage");
+  if (!erbjudanden.length) await laddaErbjudanden();
+  ritaOmradesPiller();
+  ritaKategoriGrid();
+  ritaErbjudanden();
+}
+
+function visaSida(id) {
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+
+function extraheraOmrade(butik) {
+  for (const k of ["Kävlinge","Lund","Södra Sandby"]) {
+    if (butik.includes(k)) return k;
+  }
+  return "";
+}
+
+function ritaOmradesPiller() {
+  const butiker = [...new Set(erbjudanden.map(e => e.butik))].filter(x => x).sort();
+  const container = document.getElementById("omradePiller");
+  container.innerHTML = "";
+  butiker.forEach(b => {
+    const btn = document.createElement("button");
+    btn.textContent = b;
+    btn.className = valdaOmraden.has(b) ? "active" : "";
+    btn.onclick = () => {
+      if (valdaOmraden.has(b)) valdaOmraden.delete(b);
+      else valdaOmraden.add(b);
+      ritaOmradesPiller();
+      ritaKategoriGrid();
+      ritaErbjudanden();
+    };
+    container.appendChild(btn);
+  });
+}
+
+function kategoriSynliga() {
+  return KATEGORIER.filter(k => erbjudanden.some(e =>
+    e.kategori === k &&
+    (valdaOmraden.size === 0 || valdaOmraden.has(e.butik))
+  ));
+}
+
+function ritaKategoriGrid() {
+  const container = document.getElementById("katGrid");
+  container.innerHTML = "";
+  const antal = {};
+  erbjudanden.forEach(e => {
+    if (valdaOmraden.size && !valdaOmraden.has(e.butik)) return;
+    antal[e.kategori] = (antal[e.kategori] || 0) + 1;
+  });
+  KATEGORIER.forEach(k => {
+    if (!antal[k]) return;
+    const btn = document.createElement("button");
+    btn.className = "kat-knapp" + (valdKategori === k ? " active" : "");
+    btn.innerHTML = '<div class="namn">' + k + '</div><div class="antal">' + antal[k] + '</div>';
+    btn.onclick = () => {
+      valdKategori = (valdKategori === k) ? null : k;
+      ritaKategoriGrid();
+      ritaErbjudanden();
+    };
+    container.appendChild(btn);
+  });
+}
+
+function ritaErbjudanden() {
+  const container = document.getElementById("erbjudandeLista");
+  const tomt = document.getElementById("tomtMeddelande");
+  if (!valdKategori) {
+    container.innerHTML = "";
+    tomt.style.display = "block";
+    ritaBottenNav();
+    return;
+  }
+  tomt.style.display = "none";
+  let lista = erbjudanden.filter(e => {
+    if (e.kategori !== valdKategori) return false;
+    if (valdaOmraden.size && !valdaOmraden.has(e.butik)) return false;
+    return true;
+  });
+  lista.sort((a, b) => a.produkt.localeCompare(b.produkt, "sv"));
+  container.innerHTML = "";
+  lista.forEach(e => {
+    const rad = document.createElement("div");
+    rad.className = "erbjudande";
+    const prisText = e.antal > 1 ? e.antal + " för " + e.pris + ":-" : e.pris + ":-";
+    const jamfor = e.jamforpris ? " · " + e.jamforpris : "";
+    const giltig = e.giltig ? " · " + e.giltig : "";
+    rad.innerHTML = '<div class="info"><div class="namn">' + e.produkt + '</div><div class="meta">' + e.butik + giltig + jamfor + '</div></div><div class="pris">' + prisText + '</div>';
+    rad.onclick = () => laggTillErbjudande(e);
+    container.appendChild(rad);
+  });
+  ritaBottenNav();
+}
+
+function ritaBottenNav() {
+  const nav = document.getElementById("bottenNav");
+  const kat = valdKategori;
+  if (!kat) { nav.classList.add("hidden"); nav.innerHTML = ""; return; }
+  const lista = kategoriSynliga();
+  const idx = lista.indexOf(kat);
+  if (idx === -1) { nav.classList.add("hidden"); return; }
+  nav.classList.remove("hidden");
+  nav.innerHTML =
+    '<button class="nav-pil" id="prevKat">&#8592;</button>' +
+    '<span class="nav-kat">' + kat + '</span>' +
+    '<button class="nav-pil" id="nextKat">&#8594;</button>';
+  document.getElementById("prevKat").onclick = () => {
+    valdKategori = lista[(idx - 1 + lista.length) % lista.length];
+    ritaKategoriGrid(); ritaErbjudanden();
+  };
+  document.getElementById("nextKat").onclick = () => {
+    valdKategori = lista[(idx + 1) % lista.length];
+    ritaKategoriGrid(); ritaErbjudanden();
+  };
+}
+
+function laggTillErbjudande(e) {
+  const listnamn = matchaListnamn(e.butik);
+  if (!allLists[listnamn]) allLists[listnamn] = { data: {}, itemStates: {}, openCategories: new Set() };
+  const kategori = e.kategori;
+  if (!allLists[listnamn].data[kategori]) allLists[listnamn].data[kategori] = {};
+  const antalText = e.antal > 1 ? e.antal + " st" : "1 st";
+  allLists[listnamn].data[kategori][e.produkt] = antalText;
+  const sparade = JSON.parse(localStorage.getItem("shoppingLists") || "{}");
+  sparade[listnamn] = { data: allLists[listnamn].data, itemStates: allLists[listnamn].itemStates || {}, openCategories: Array.from(allLists[listnamn].openCategories || []) };
+  localStorage.setItem("shoppingLists", JSON.stringify(sparade));
+  visaToast("Tillagd i " + listnamn);
+}
+
+function tillbaka() {
+  visaSida("startPage");
+  loadLists();
+}
+
+let currentShop = null, itemStates = {}, addOpen = false, openCategories = new Set(), allLists = {};
+const categoriesContainer = document.getElementById("categoriesContainer");
+const emptyState = document.getElementById("emptyState");
+const categorySelect = document.getElementById("categorySelect");
+const newItemInput = document.getElementById("newItemInput");
+const qtyInput = document.getElementById("qtyInput");
+const addSection = document.getElementById("addSection");
+const savedContainer = document.getElementById("savedListsContainer");
+const newListNameInput = document.getElementById("newListName");
+
+function loadLists() {
+  const saved = localStorage.getItem("shoppingLists");
+  if (saved) {
+    try {
+      allLists = JSON.parse(saved);
+      Object.keys(allLists).forEach(name => {
+        if (!allLists[name].itemStates) allLists[name].itemStates = {};
+        if (!allLists[name].openCategories) allLists[name].openCategories = [];
+        allLists[name].openCategories = new Set(allLists[name].openCategories);
+      });
+    } catch (e) { allLists = {}; }
+  } else { allLists = {}; }
+  renderSavedLists();
+}
+
+function saveLists() {
+  const toSave = {};
+  Object.keys(allLists).forEach(name => {
+    toSave[name] = { data: allLists[name].data || {}, itemStates: allLists[name].itemStates || {}, openCategories: allLists[name].openCategories ? Array.from(allLists[name].openCategories) : [] };
+  });
+  localStorage.setItem("shoppingLists", JSON.stringify(toSave));
+  renderSavedLists();
+}
+
+function saveCurrentList() {
+  if (!currentShop) return;
+  if (!allLists[currentShop]) allLists[currentShop] = { data: {}, itemStates: {}, openCategories: new Set() };
+  allLists[currentShop].data = getCurrentData();
+  allLists[currentShop].itemStates = { ...itemStates };
+  allLists[currentShop].openCategories = new Set(openCategories);
+  saveLists();
+}
+
+function getCurrentData() {
+  const data = {};
+  document.querySelectorAll(".category").forEach(catDiv => {
+    const header = catDiv.querySelector(".category-header span");
+    if (!header) return;
+    const catName = header.textContent;
+    data[catName] = {};
+    catDiv.querySelectorAll(".item").forEach(item => {
+      const n = item.querySelector(".name"), q = item.querySelector(".qty");
+      if (n && q) data[catName][n.textContent] = q.textContent;
+    });
+  });
+  return data;
+}
+
+function renderSavedLists() {
+  savedContainer.innerHTML = "";
+  const names = Object.keys(allLists);
+  if (!names.length) { savedContainer.innerHTML = '<div class="empty-lists">Inga listor sparade än.</div>'; return; }
+  names.forEach(name => {
+    const div = document.createElement("div");
+    div.className = "saved-list-item";
+    const span = document.createElement("span");
+    span.className = "name";
+    span.textContent = name;
+    span.onclick = () => openList(name);
+    div.appendChild(span);
+    const del = document.createElement("button");
+    del.className = "del-btn";
+    del.textContent = "\u2715";
+    del.onclick = (e) => {
+      e.stopPropagation();
+      delete allLists[name];
+      saveLists();
+    };
+    div.appendChild(del);
+    savedContainer.appendChild(div);
+  });
+}
+
+function skapaNyLista() {
+  const name = newListNameInput.value.trim();
+  if (!name) { alert("Skriv in ett namn!"); return; }
+  if (allLists[name]) { alert("En lista med det namnet finns redan!"); return; }
+  allLists[name] = { data: {}, itemStates: {}, openCategories: new Set() };
+  newListNameInput.value = "";
+  saveLists();
+  openList(name);
+}
+
+function openList(name) {
+  if (!allLists[name]) { alert("Listan finns inte!"); return; }
+  currentShop = name;
+  itemStates = allLists[name].itemStates || {};
+  openCategories = allLists[name].openCategories || new Set();
+  document.getElementById("shopTitle").textContent = name;
+  visaSida("shopPage");
+  categorySelect.innerHTML = '<option value="">Välj kategori...</option>';
+  KATEGORIER.forEach(cat => {
+    const opt = document.createElement("option");
+    opt.value = cat; opt.textContent = cat;
+    categorySelect.appendChild(opt);
+  });
+  renderShop();
+}
+
+function raderaLista() {
+  if (!currentShop) return;
+  delete allLists[currentShop];
+  saveLists();
+  tillbaka();
+}
+
+function vaxlaLaggTill() { addOpen = !addOpen; addSection.classList.toggle("open", addOpen); }
+
+function renderShop() {
+  if (!currentShop) return;
+  const data = allLists[currentShop].data || {};
+  categoriesContainer.innerHTML = "";
+  let hasItems = false;
+  Object.keys(data).forEach(cat => {
+    const items = data[cat];
+    const keys = Object.keys(items);
+    if (!keys.length) return;
+    hasItems = true;
+    const allDone = keys.every(k => itemStates[cat + "|" + k]);
+    const catDiv = document.createElement("div");
+    catDiv.className = "category" + (allDone ? " complete" : "");
+    const header = document.createElement("div");
+    header.className = "category-header";
+    header.innerHTML = "<span>" + cat + "</span><span>" + (allDone ? "\u2705" : "") + "</span>";
+    header.addEventListener("click", function() {
+      if (openCategories.has(cat)) openCategories.delete(cat);
+      else openCategories.add(cat);
+      this.nextElementSibling.classList.toggle("open");
+      saveCurrentList();
+    });
+    catDiv.appendChild(header);
+    const itemsDiv = document.createElement("div");
+    itemsDiv.className = "category-items" + (openCategories.has(cat) ? " open" : "");
+    keys.forEach(key => {
+      const stateKey = cat + "|" + key;
+      const checked = itemStates[stateKey] || false;
+      const itemDiv = document.createElement("div");
+      itemDiv.className = "item" + (checked ? " done-item" : "");
+      const cb = document.createElement("input");
+      cb.type = "checkbox"; cb.checked = checked;
+      cb.addEventListener("click", e => e.stopPropagation());
+      cb.addEventListener("change", () => { itemStates[stateKey] = !itemStates[stateKey]; renderShop(); });
+      itemDiv.appendChild(cb);
+      const qty = document.createElement("span");
+      qty.className = "qty"; qty.textContent = items[key];
+      itemDiv.appendChild(qty);
+      const nm = document.createElement("span");
+      nm.className = "name" + (checked ? " done" : "");
+      nm.textContent = key;
+      itemDiv.appendChild(nm);
+      const del = document.createElement("button");
+      del.className = "delete-btn"; del.textContent = "\u2715";
+      del.onclick = (e) => {
+        e.stopPropagation();
+        delete data[cat][key];
+        delete itemStates[stateKey];
+        renderShop();
+      };
+      itemDiv.appendChild(del);
+      itemsDiv.appendChild(itemDiv);
+    });
+    catDiv.appendChild(itemsDiv);
+    categoriesContainer.appendChild(catDiv);
+  });
+  emptyState.style.display = hasItems ? "none" : "block";
+  saveCurrentList();
+}
+
+function laggTillVara() {
+  if (!currentShop) return;
+  const name = newItemInput.value.trim();
+  if (!name) return alert("Skriv in en vara!");
+  const category = categorySelect.value;
+  if (!category) return alert("Välj en kategori!");
+  const qty = qtyInput.value.trim() || "1 st";
+  const data = allLists[currentShop].data;
+  if (!data[category]) data[category] = {};
+  if (data[category][name]) return alert('"' + name + '" finns redan i ' + category);
+  data[category][name] = qty;
+  newItemInput.value = ""; qtyInput.value = "1 st"; categorySelect.value = "";
+  renderShop();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadLists();
+  laddaErbjudanden();
+  newItemInput.addEventListener("keydown", e => { if (e.key === "Enter") laggTillVara(); });
+  newListNameInput.addEventListener("keydown", e => { if (e.key === "Enter") skapaNyLista(); });
+});
+
+window.visaErbjudanden = visaErbjudanden;
+window.tillbaka = tillbaka;
+window.skapaNyLista = skapaNyLista;
+window.openList = openList;
+window.raderaLista = raderaLista;
+window.vaxlaLaggTill = vaxlaLaggTill;
+window.laggTillVara = laggTillVara;
+</script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+[
+  {
+    "produkt": "Färsk fläskytterfilé",
+    "pris": 65,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Satsumas",
+    "pris": 20,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Morötter/palsternacka/gul lök",
+    "pris": 10,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "10-20:-/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Svenskt smör",
+    "pris": 45,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "90:-/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Krossade tomater",
+    "pris": 25,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "32:05/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Läsk 6-pack",
+    "pris": 59,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "14:90/liter",
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pizza",
+    "pris": 99,
+    "antal": 3,
+    "enhet": "for",
+    "jamforpris": null,
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Färsk skinkstek",
+    "pris": 89,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Stekfläsk",
+    "pris": 47.5,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "126:67/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Fina torskfiléer 3-pack",
+    "pris": 99,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "264:-/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kalkonbröstfilé",
+    "pris": 179,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Korv",
+    "pris": 79,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "105:33/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Broccoli",
+    "pris": 26,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "52:-/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologiska färska kryddor",
+    "pris": 15,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": null,
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Tomater",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Små delikatessköttbullar",
+    "pris": 45,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "107:14/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Färsk pasta",
+    "pris": 49,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "49-98:-/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pastasås",
+    "pris": 30,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "38:46/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Hummus original",
+    "pris": 15,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "75:-/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Vetemjöl",
+    "pris": 30,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "7:50/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pasta korta former",
+    "pris": 35,
+    "antal": 3,
+    "enhet": "for",
+    "jamforpris": "23:33/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Matpaj",
+    "pris": 99,
+    "antal": 4,
+    "enhet": "for",
+    "jamforpris": null,
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Matlagnings-/vispgrädde",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "50:-/liter",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pizzadeg Napoli",
+    "pris": 39,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "65:-/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pizzadeg Napoli XXL",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "50:-/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ketchup",
+    "pris": 55,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "27:50-28:06/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kycklingsteak",
+    "pris": 89,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Riven ost",
+    "pris": 20,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "133:33/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Klassikerost",
+    "pris": 85,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Nötter",
+    "pris": 35,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "58:33-116:67/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Snacks",
+    "pris": 65,
+    "antal": 3,
+    "enhet": "for",
+    "jamforpris": "78:79-108:33/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Smörgåspålägg",
+    "pris": 49,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "245-306:25/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Hela kaffebönor",
+    "pris": 130,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "130-144:44/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Bredbar pastej",
+    "pris": 22,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "55-73:33/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Fruktdryck",
+    "pris": 54,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "27:-/liter",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Havregott",
+    "pris": 69,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "98:57/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Stekpanna 28 cm",
+    "pris": 149.5,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": null,
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Maskindiskmedel",
+    "pris": 95,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "1:98-2:50/disk",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Äppelmust",
+    "pris": 48,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "24:-/liter",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Energidryck",
+    "pris": 33,
+    "antal": 3,
+    "enhet": "for",
+    "jamforpris": "44:-/liter",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Chokladkakor",
+    "pris": 50,
+    "antal": 2,
+    "enhet": "for",
+    "jamforpris": "172:41-208:33/kg",
+    "sida": 7,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Laktosfri yoghurt/kefir",
+    "pris": 20,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": null,
+    "sida": 12,
+    "giltig": "5–11 oktober"
+  }
+]

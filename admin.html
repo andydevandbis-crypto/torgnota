@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%230f766e'/%3E%3Cpath d='M6 7h2l2 8h8l2-6H8' stroke='white' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='10' cy='18' r='1.5' fill='white'/%3E%3Ccircle cx='16' cy='18' r='1.5' fill='white'/%3E%3C/svg%3E">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", -apple-system, sans-serif; background: #f1f5f9; color: #0f172a; min-height: 100vh; font-size: 16px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+h1 { font-size: 26px; font-weight: 700; }
+h2 { font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #0f766e; }
+.topbar { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+.topbar .spacer { flex: 1; }
+.topbar a { color: #0f766e; text-decoration: none; font-weight: 600; font-size: 15px; }
+.btn { padding: 10px 18px; background: #0f766e; color: #fff; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; }
+.btn:hover { background: #0d5f58; }
+.btn.active { background: #0f172a; }
+.btn-ghost { background: #fff; color: #0f766e; border: 2px solid #0f766e; }
+.btn-ghost:hover { background: #f0fdfa; }
+.btn-danger { background: #dc2626; }
+.btn-danger:hover { background: #b91c1c; }
+.section { background: #fff; border: 2px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+.row { display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; align-items: center; }
+.row input[type="text"], .row input[type="password"], .row select { padding: 11px 14px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 15px; outline: none; }
+.row input[type="text"] { flex: 1; min-width: 200px; }
+.row input:focus, .row select:focus { border-color: #0f766e; }
+.flikar { display: flex; gap: 8px; margin-bottom: 16px; }
+.flik { padding: 10px 20px; background: #fff; border: 2px solid #cbd5e1; border-radius: 20px; font-size: 15px; font-weight: 600; cursor: pointer; color: #0f172a; }
+.flik.active { background: #0f766e; color: #fff; border-color: #0f766e; }
+.kats-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.kat-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; background: #f1f5f9; border-radius: 20px; font-size: 14px; font-weight: 500; }
+.kat-pill button { background: none; border: none; color: #64748b; font-size: 16px; cursor: pointer; padding: 0; }
+.kat-pill button:hover { color: #dc2626; }
+.stores-list { display: flex; flex-direction: column; gap: 8px; }
+.store-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: #f8fafc; border-radius: 10px; border: 1px solid #e2e8f0; }
+.store-item .name { font-weight: 600; }
+.store-item .del-btn { background: none; border: none; color: #64748b; font-size: 20px; cursor: pointer; }
+.store-item .del-btn:hover { color: #dc2626; }
+.prod-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e2e8f0; }
+.prod-row:last-child { border-bottom: none; }
+.prod-row .namn { flex: 1; font-weight: 500; }
+.prod-row .butik { font-size: 13px; color: #64748b; margin-left: 8px; font-weight: 400; }
+.prod-row select { padding: 8px 12px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 14px; outline: none; background: #fff; min-width: 180px; }
+.prod-row select:focus { border-color: #0f766e; }
+.prod-row .ta-bort-btn { padding: 8px 12px; background: #fff; color: #dc2626; border: 2px solid #fecaca; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.prod-row .ta-bort-btn:hover { background: #fef2f2; }
+.fil-valjare { display: inline-block; padding: 10px 18px; background: #0f766e; color: #fff; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 15px; }
+.fil-valjare input { display: none; }
+.login-box { max-width: 420px; margin: 80px auto; background: #fff; border: 2px solid #e2e8f0; border-radius: 16px; padding: 32px; text-align: center; }
+.login-box h1 { font-size: 24px; margin-bottom: 8px; }
+.login-box p { color: #475569; font-size: 15px; margin-bottom: 20px; }
+.login-box input { width: 100%; padding: 14px; border: 2px solid #cbd5e1; border-radius: 10px; font-size: 16px; outline: none; margin-bottom: 12px; text-align: center; }
+.login-box input:focus { border-color: #0f766e; }
+.login-box button { width: 100%; padding: 14px; background: #0f766e; color: #fff; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; }
+.fel { color: #dc2626; font-size: 14px; margin-top: 8px; min-height: 20px; }
+.hidden { display: none; }
+.tom-lista { text-align: center; padding: 40px 20px; color: #475569; font-size: 15px; }
+.info-rad { font-size: 14px; color: #475569; margin-bottom: 14px; }
+.kat-grupp { margin-bottom: 20px; }
+.kat-grupp-hdr { font-size: 15px; font-weight: 700; color: #0f766e; padding: 8px 0; border-bottom: 1px solid #e2e8f0; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div id="loginView" class="login-box">
+    <h1>Admin</h1>
+    <p>Logga in för att hantera kategorier och butiker</p>
+    <input type="password" id="pw" placeholder="Lösenord" autofocus>
+    <button onclick="loggaIn()">Logga in</button>
+    <div class="fel" id="fel"></div>
+  </div>
+
+  <div id="adminView" class="hidden">
+    <div class="topbar">
+      <h1>Admin</h1>
+      <div class="spacer"></div>
+      <a href="/">Till startsidan</a>
+      <button class="btn btn-ghost" onclick="loggaUt()">Logga ut</button>
+    </div>
+
+    <div class="section">
+      <h2>Produkter</h2>
+      <div class="flikar">
+        <button class="flik active" id="flikAttGora" onclick="valjFlik('attgora')">Att göra</button>
+        <button class="flik" id="flikFardiga" onclick="valjFlik('fardiga')">Färdiga</button>
+      </div>
+      <div id="sokRad" class="row hidden">
+        <input type="text" id="sokInput" placeholder="Sök bland färdiga produkter...">
+      </div>
+      <div class="info-rad" id="infoRad"></div>
+      <div id="produkterContainer"></div>
+    </div>
+
+    <div class="section">
+      <h2>Butiker & städer</h2>
+      <p class="info-rad">Ladda upp JSON-filer. Filnamnet blir butikens namn (t.ex. "ICA Lund.json").</p>
+      <div class="row">
+        <label class="fil-valjare">
+          Ladda upp JSON
+          <input type="file" id="filInput" accept=".json">
+        </label>
+      </div>
+      <div class="stores-list" id="storesList"></div>
+    </div>
+
+    <div class="section">
+      <h2>Kategorier</h2>
+      <div class="row">
+        <input type="text" id="nyKat" placeholder="Namn på ny kategori">
+        <button class="btn" onclick="laggTillKategori()">Lägg till</button>
+      </div>
+      <div class="kats-list" id="katsList"></div>
+    </div>
+
+    <div class="section">
+      <h2>Återställ</h2>
+      <p class="info-rad">Tar bort alla manuella kategorival och återställer standardkategorierna.</p>
+      <button class="btn btn-danger" onclick="rensaAllt()">Rensa allt</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let kategoriData = { categories: [], assignments: {} };
+let produkter = [];
+let aktivFlik = "attgora";
+let sokText = "";
+const NYCKELORD = {
+  "Hushåll": ["diskmedel","maskindiskmedel","avfallspåse","fryspåse","plastpåse","hushållsduk","städservett","skrubb","rengöring","toalettpapper","hushållspapper","tvättmedel","sköljmedel","sopsäck","allrengöring"],
+  "Kök": ["stekpanna","kastrull","kniv","skärbräda","matförvaring","köksredskap","grytlapp","förkläde","skål","dricksglas","sopset","dammsugare","kolsyremaskin","kabinväska"],
+  "Chark & Pålägg": ["skinka","skinkstek","bacon","prosciutto","pancetta","chark","salami","fuet","pastej","leverpastej","smörgåspålägg","pålägg","kalkon","wienerkorv","grillkorv","stekfläsk","mignon","salsiccia","chorizo","kryddkorv","kassler"],
+  "Kött & Fisk": ["kött","köttfärs","blandfärs","fläsk","fläskfilé","fläskfärs","fläskytterfilé","fläskkarré","grytbitar","biff","pepparbiff","kotlett","schnitzel","kyckling","kycklingsteak","kebab","nuggets","burgare","korv","fisk","torsk","lax","räkor","köttbullar","cevapcici","fransyska","kalvfärs","lammracks","pulled","högrev","entrecôte","lövbiff","älgstek","fläsklägg","skinkstek","hamburgare","minutfilé","högrevsburgare","torskrygg","fiskburgare","lubb","uer","havskräftor"],
+  "Dryck": ["läsk","juice","kaffe","kaffebönor","ikaffe","energidryck","fruktdryck","must","äppelmust","vatten","öl","vin","saft","pellegrino","cola","coca","iste","cider","kombucha","lemonad","folköl","bärdryck","smoothie"],
+  "Bröd & Bageri": ["bröd","polarbröd","polarpärlan","kaka","kakor","bulle","tortilla","tacos","kex","twist","knäcke","ciabatta","pizzadeg","pannkakor","pane","lingongrova","guldkorn","jubileumsbröd","pågenlimpan","rosta","sirapsslimpa","surdegsbröd","havrefralla","kebabbröd","pirog","korvbröd","jallekaka"],
+  "Fryst": ["fryst","glass","pizza","grandiosa","enportion","matpaj","färdigrätt","dumplings","asia box","sötpotatis strips"],
+  "Skafferi": ["pasta","ris","sås","såser","soppa","olja","rapsolja","olivolja","protein","profeel","milkshake","pudding","mousse","hummus","ketchup","vetemjöl","mjöl","pesto","agave","matvete","gräddsås","müsli","flingor","honung","sirap","sylt","krossade","passerade","gnocchi","kakao","florsocker","rörsocker","majs","vinbärsgelé","bönor","kikärtor","linser","nudlar","basmatiris","jasminris","potatisgratäng","tortilla","tacås","salsa","pasta sauce","mascarpone","parmigiano"],
+  "Snacks & Godis": ["chips","cochips","popcorn","snacks","nötter","choklad","godis","snickers","mars","bounty","twix","tuggummi","bars","proteinbars","kondisrullar","toffifee","nutella","smash","bilar","lakrits","tutti frutti","biscoff","valnötter","cashew","ostbågar","skumtoppar","cookies"],
+  "Mejeri & Ost": ["mjölk","mjölkdryck","laktosfri","yoghurt","kefir","grädde","gräddfil","smör","margarin","ost","hårdost","hushållsost","klassikerost","mozzarella","ägg","kvarg","filmjölk","havregott","gårdsgoda","creme","crème","vispgrädde","matgrädde","turkkis","brie","gouda","maasdamer","gruyère","bondost","délice"],
+  "Frukt & Grönt": ["äpple","äpplen","banan","tomat","tomater","gurka","paprika","sallad","morot","morötter","palsternacka","potatis","sötpotatis","lök","plommon","avokado","satsumas","frukt","kaktus","pumpa","broccoli","brysselkål","champinjon","surkål","betor","krydd","kryddor","druvor","aubergine","citron","päron","kiwi","blåbär","hallon","mango","fikon","rotselleri","rödbeta","vitkål","kålrot","romanticatomater","babylommontomater","grönkål","basilika","koriander","timjan","majs"]
+};
+
+
+function nyckel(p) { return p.toLowerCase().trim().replace(/\s+/g, " "); }
+function arFardig(p) { return p.kategori && p.kategori !== ""; }
+
+async function kollaInlogg() {
+  try {
+    const res = await fetch("/api/data");
+    const d = await res.json();
+    if (d.is_admin) visaAdmin(d);
+  } catch (e) {}
+}
+
+function visaAdmin(d) {
+  document.getElementById("loginView").classList.add("hidden");
+  document.getElementById("adminView").classList.remove("hidden");
+  kategoriData = d.categories;
+  produkter = (d.items || []).map(p => {
+    let kat = kategoriData.assignments[nyckel(p.produkt)];
+    if (!kat) {
+      const ord = nyckel(p.produkt).split(/[\s,.\-&()\/:]+/).filter(w => w.length > 0);
+      outer: for (const [k, nyckelord] of Object.entries(NYCKELORD)) {
+        for (const nk of nyckelord) {
+          for (const o of ord) {
+            if (o === nk || o.startsWith(nk) || (nk.length >= 5 && o.includes(nk))) {
+              kat = k; break outer;
+            }
+          }
+        }
+      }
+    }
+    return { ...p, kategori: kat || "" };
+  });
+  ritaKategorier();
+  ritaButiker();
+  ritaProdukter();
+}
+
+async function loggaIn() {
+  const pw = document.getElementById("pw").value;
+  const res = await fetch("/api/login", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ password: pw })
+  });
+  if (res.ok) {
+    const d = await fetch("/api/data").then(r => r.json());
+    visaAdmin(d);
+  } else {
+    document.getElementById("fel").textContent = "Fel lösenord";
+  }
+}
+
+async function loggaUt() {
+  await fetch("/api/logout", { method: "POST" });
+  location.reload();
+}
+
+function valjFlik(f) {
+  aktivFlik = f;
+  document.getElementById("flikAttGora").classList.toggle("active", f === "attgora");
+  document.getElementById("flikFardiga").classList.toggle("active", f === "fardiga");
+  document.getElementById("sokRad").classList.toggle("hidden", f !== "fardiga");
+  ritaProdukter();
+}
+
+function ritaProdukter() {
+  const container = document.getElementById("produkterContainer");
+  const info = document.getElementById("infoRad");
+  container.innerHTML = "";
+
+  let lista = produkter.filter(p => aktivFlik === "fardiga" ? arFardig(p) : !arFardig(p));
+
+  if (aktivFlik === "fardiga" && sokText) {
+    const s = sokText.toLowerCase();
+    lista = lista.filter(p => p.produkt.toLowerCase().includes(s) || (p.butik || "").toLowerCase().includes(s));
+  }
+
+  const antalAttGora = produkter.filter(p => !arFardig(p)).length;
+  const antalFardiga = produkter.length - antalAttGora;
+
+  if (!lista.length) {
+    container.innerHTML = '<div class="tom-lista">' + (aktivFlik === "attgora" ? "Inga produkter att kategorisera. Bra jobbat!" : "Inga matchar sökningen.") + '</div>';
+    info.textContent = aktivFlik === "attgora" ? "0 produkter kvar" : "";
+    return;
+  }
+
+  info.textContent = aktivFlik === "attgora"
+    ? antalAttGora + " produkter att kategorisera"
+    : antalFardiga + " färdiga produkter" + (sokText ? " (visar " + lista.length + ")" : "");
+
+  lista.sort((a, b) => a.produkt.localeCompare(b.produkt, "sv"));
+
+  lista.forEach(p => {
+    const row = document.createElement("div");
+    row.className = "prod-row";
+    const namnSpan = document.createElement("span");
+    namnSpan.className = "namn";
+    namnSpan.innerHTML = p.produkt + '<span class="butik">' + p.butik + '</span>';
+    row.appendChild(namnSpan);
+
+    const sel = document.createElement("select");
+    const tomOpt = document.createElement("option");
+    tomOpt.value = ""; tomOpt.textContent = "Välj kategori...";
+    if (!p.kategori) tomOpt.selected = true;
+    sel.appendChild(tomOpt);
+    kategoriData.categories.forEach(c => {
+      const opt = document.createElement("option");
+      opt.value = c; opt.textContent = c;
+      if (c === p.kategori) opt.selected = true;
+      sel.appendChild(opt);
+    });
+    sel.onchange = () => { if (sel.value) sparaKategori(p.produkt, sel.value); };
+    row.appendChild(sel);
+
+    const taBort = document.createElement("button");
+    taBort.className = "ta-bort-btn";
+    taBort.textContent = "Ta bort";
+    taBort.onclick = () => taBortProdukt(p.produkt, p.butik);
+    row.appendChild(taBort);
+
+    container.appendChild(row);
+  });
+}
+
+async function sparaKategori(produkt, kategori) {
+  await fetch("/api/assign", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ produkt: produkt, kategori: kategori })
+  });
+  kategoriData.assignments[nyckel(produkt)] = kategori;
+  const p = produkter.find(x => x.produkt === produkt);
+  if (p) p.kategori = kategori;
+  ritaProdukter();
+}
+
+async function taBortProdukt(produkt, butik) {
+  if (!confirm('Ta bort "' + produkt + '" från ' + butik + '?')) return;
+  const res = await fetch("/api/product/delete", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ produkt: produkt, butik: butik })
+  });
+  const d = await res.json();
+  if (d.error) { alert("Fel: " + d.error); return; }
+  produkter = produkter.filter(p => !(p.produkt === produkt && p.butik === butik));
+  delete kategoriData.assignments[nyckel(produkt)];
+  ritaProdukter();
+}
+
+function ritaKategorier() {
+  const container = document.getElementById("katsList");
+  container.innerHTML = "";
+  kategoriData.categories.forEach(k => {
+    const pill = document.createElement("div");
+    pill.className = "kat-pill";
+    pill.innerHTML = '<span>' + k + '</span><button title="Ta bort" onclick="taBortKategori(\'' + k.replace(/'/g,"\\'") + '\')">&#10005;</button>';
+    container.appendChild(pill);
+  });
+}
+
+async function laggTillKategori() {
+  const namn = document.getElementById("nyKat").value.trim();
+  if (!namn) return;
+  await fetch("/api/category/add", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ namn: namn })
+  });
+  document.getElementById("nyKat").value = "";
+  await laddaOm();
+}
+
+async function taBortKategori(namn) {
+  if (!confirm("Ta bort kategorin \"" + namn + "\"?")) return;
+  await fetch("/api/category/remove", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ namn: namn })
+  });
+  await laddaOm();
+}
+
+async function ritaButiker() {
+  const res = await fetch("/api/stores");
+  const d = await res.json();
+  const container = document.getElementById("storesList");
+  container.innerHTML = "";
+  if (!d.stores.length) {
+    container.innerHTML = '<p style="color:#64748b">Inga butiker uppladdade än.</p>';
+    return;
+  }
+  d.stores.forEach(s => {
+    const div = document.createElement("div");
+    div.className = "store-item";
+    div.innerHTML = '<span class="name">' + s + '</span><button class="del-btn" onclick="taBortButik(\'' + s.replace(/'/g,"\\'") + '\')">&#10005;</button>';
+    container.appendChild(div);
+  });
+}
+
+async function taBortButik(namn) {
+  if (!confirm("Ta bort butiken \"" + namn + "\"?")) return;
+  await fetch("/api/store/delete", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ namn: namn })
+  });
+  await laddaOm();
+}
+
+document.getElementById("filInput").addEventListener("change", async e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  const fd = new FormData();
+  fd.append("file", f);
+  const res = await fetch("/api/store/upload", { method: "POST", body: fd });
+  const d = await res.json();
+  if (d.error) alert("Fel: " + d.error);
+  else await laddaOm();
+  e.target.value = "";
+});
+
+document.getElementById("sokInput").addEventListener("input", e => {
+  sokText = e.target.value;
+  ritaProdukter();
+});
+
+async function rensaAllt() {
+  if (!confirm("Rensa alla manuella kategorival?")) return;
+  await fetch("/api/reset", { method: "POST" });
+  await laddaOm();
+}
+
+async function laddaOm() {
+  const d = await fetch("/api/data").then(r => r.json());
+  kategoriData = d.categories;
+  produkter = (d.items || []).map(p => {
+    let kat = kategoriData.assignments[nyckel(p.produkt)];
+    if (!kat) {
+      const ord = nyckel(p.produkt).split(/[\s,.\-&()\/:]+/).filter(w => w.length > 0);
+      outer: for (const [k, nyckelord] of Object.entries(NYCKELORD)) {
+        for (const nk of nyckelord) {
+          for (const o of ord) {
+            if (o === nk || o.startsWith(nk) || (nk.length >= 5 && o.includes(nk))) {
+              kat = k; break outer;
+            }
+          }
+        }
+      }
+    }
+    return { ...p, kategori: kat || "" };
+  });
+  ritaKategorier();
+  ritaButiker();
+  ritaProdukter();
+}
+
+document.getElementById("pw").addEventListener("keydown", e => {
+  if (e.key === "Enter") loggaIn();
+});
+
+kollaInlogg();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,848 @@
+[
+  {
+    "produkt": "Jubileumsbröd Östras",
+    "pris": 19.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "19:90/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Hushållsost Arla",
+    "pris": 69.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "69:90/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Gårdsgoda Valio",
+    "pris": 50,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "50:00-62:50/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Laxfilé 4-pack Poseidon",
+    "pris": 150,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "150:00/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Färsk fläskfilé Danish Crown",
+    "pris": 69.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "69:90/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Coca-Cola 15-pack",
+    "pris": 59.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "12:10/liter",
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Jonagold Äpplen",
+    "pris": 9.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "9:90/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Surdegspizza Popi Bakery",
+    "pris": 24.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "62:25/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pizza Dr. Oetker Ristorante",
+    "pris": 85,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "75:22-78:70/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Prosciutto Crudo Garant",
+    "pris": 50,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "312:50/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pannkakor Garant",
+    "pris": 35,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "36:46/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Grytbitar av Lax Falkenberg",
+    "pris": 44.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "224:50/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pancetta Garant",
+    "pris": 49.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "249:50/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kycklingbröstfilé Ivar's",
+    "pris": 109,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "54:50/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Soppa Kelda",
+    "pris": 40,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "40:00/liter",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Gräddfil Garant",
+    "pris": 14.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "29:80/liter",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Färsk Gnocchi Eldorado",
+    "pris": 14.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "29:80/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kalvfärs Danish Crown",
+    "pris": 109,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "109:00/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Fransyska Prime",
+    "pris": 118.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "118:90/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Lammracks Affco",
+    "pris": 299,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "299:00/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pulled Pork Prime Patrol",
+    "pris": 29.8,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "74:50/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologisk Fläskfilé Garant Eko",
+    "pris": 259,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "259:00/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Skinkstek Dalsjöfors",
+    "pris": 79.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "79:90/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Schnitzel Garant",
+    "pris": 39.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "133:00/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Cevapcici Garant",
+    "pris": 49.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "146:76/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Fläskfärs Garant",
+    "pris": 34.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "69:80/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kebab av Fläskkarré Garant",
+    "pris": 39.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "79:80/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Rökt skinka, kokt skinka Garant",
+    "pris": 40,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "100:00/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Lingongrova, Guldkorn Pågen",
+    "pris": 19.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "39:80/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Crunchy Panesco",
+    "pris": 29.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "39:87-59:80/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Laktosfri Yoghurt Garant",
+    "pris": 15.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "15:90/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kvarg Lindahls",
+    "pris": 32,
+    "antal": 4,
+    "enhet": "för",
+    "jamforpris": "53:33/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Proteinpudding, Milkshake, Mousse Valio",
+    "pris": 28,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "56:00-93:33/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ciabatta Panesco",
+    "pris": 20,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "33:33/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Skivat smörgåspålägg Pärsons",
+    "pris": 28.29,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "188:60-202:07/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Skivat delipålägg Jakobsdals",
+    "pris": 37.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "473:75-583:08/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Juice Bravo",
+    "pris": 38,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "19:00/liter",
+    "sida": 4,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Wienerkorv Garant",
+    "pris": 45,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "75:00/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Majonnäs Heinz",
+    "pris": 34.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "43:63/liter",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologiskt Kaffe Garant Eko",
+    "pris": 59.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "133:11/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Rapsolja Eldorado",
+    "pris": 19.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "19:90/liter",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Bacon Garant",
+    "pris": 25,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "89:29/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kakao Garant",
+    "pris": 33.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "169:50/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Stillahavsflundra Omega",
+    "pris": 66.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "133:80/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Olivolja Farchioni",
+    "pris": 49.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "99:80/liter",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Glass Ben & Jerry's",
+    "pris": 44.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "96:56-105:15/liter",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Chokladkaka Garant",
+    "pris": 40,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "200:00/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologisk Kokosmölk, Kokosgrädde Garant Eko",
+    "pris": 30,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "60:00/liter",
+    "sida": 5,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ketchup Felix",
+    "pris": 26.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "26:90-27:45/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Passerade Tomater Garant",
+    "pris": 16.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "33:80/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Enportionspajer Felix",
+    "pris": 95,
+    "antal": 4,
+    "enhet": "för",
+    "jamforpris": "107:95-113:10/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Krossade, passerade Tomater Eldorado",
+    "pris": 14,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "14:00/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Spaghetti Monte Castello",
+    "pris": 24,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "12:00/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Skivat Stekfläsk Prime Patrol",
+    "pris": 79.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "79:90/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologiska Buljongtärningar Garant Eko",
+    "pris": 18,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "3:00/liter",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Snabbnudlar Eldorado",
+    "pris": 18,
+    "antal": 5,
+    "enhet": "för",
+    "jamforpris": "42:35/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Gammaldags Ideal Makaroner Kungsörnen",
+    "pris": 21,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "14:00/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Jasminris Eldorado",
+    "pris": 37.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "18:95/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Gurka Spanien",
+    "pris": 12.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "47:78/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Matpumpa",
+    "pris": 14.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "14:90/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Sötpotatis Egypten",
+    "pris": 14.9,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": "14:90/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Champinjoner",
+    "pris": 12.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "51:60/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Brysselkål",
+    "pris": 9.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "24:75/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologisk Sallad",
+    "pris": 9.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "152:31/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologisk Surkål",
+    "pris": 14.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "29:80/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologiska Gul- & Polkatbetor",
+    "pris": 14.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "24:83/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Multivitamindryck Eldorado",
+    "pris": 25,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "8:33/liter",
+    "sida": 9,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Kaviar Svennes",
+    "pris": 45,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "90:00/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Veganskt Pålägg Quorn",
+    "pris": 21.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "219:00/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Bredbar Leverpastej Garant",
+    "pris": 20,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "50:00/kg",
+    "sida": 9,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Oatly iKaffe",
+    "pris": 30,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": null,
+    "sida": 9,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pesto Garant",
+    "pris": 46,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "115:00/kg",
+    "sida": 10,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologisk Agavesirap Lune de Miel",
+    "pris": 42.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "85:80/kg",
+    "sida": 10,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologisk Matvete, Matvete Frebaco",
+    "pris": 22,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "22:00-27:50/kg",
+    "sida": 10,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Gräddsås Blå Band",
+    "pris": 22,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": null,
+    "sida": 10,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Ekologiskt Kaffe Arvid Nordquist",
+    "pris": 72.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "162:00/kg",
+    "sida": 10,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pasta La Molisana",
+    "pris": 32,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "32:00/kg",
+    "sida": 10,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Te 17-pack Arvid Nordquist",
+    "pris": 50,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "1:47/st",
+    "sida": 10,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Pane Napoletano Garant",
+    "pris": 14.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "59:60/kg",
+    "sida": 10,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Tortilla Mini 8-pack Banderos",
+    "pris": 23,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "57:50/kg",
+    "sida": 10,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Cochips Santa Maria",
+    "pris": 26,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": null,
+    "sida": 10,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Böna 4-pack Heinz",
+    "pris": 39.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "399:00/kg",
+    "sida": 10,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Bilar Ahlgrens",
+    "pris": 26,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": null,
+    "sida": 11,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Smash XL",
+    "pris": 49.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": null,
+    "sida": 11,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "San Pellegrino",
+    "pris": 52.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "26:72/liter + pant",
+    "sida": 11,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Chokladkaka Marabou",
+    "pris": 32,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "160:00-183:91/kg",
+    "sida": 11,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Stycksaker Nestle",
+    "pris": 30,
+    "antal": 4,
+    "enhet": "för",
+    "jamforpris": "178:57-197:37/kg",
+    "sida": 11,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Torkad Mango Sunshine Delig",
+    "pris": 48,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "240:00/kg",
+    "sida": 11,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Cashewnötter Den Lille Nött",
+    "pris": 49.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "199:60/kg",
+    "sida": 11,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Läsk Premier",
+    "pris": 20,
+    "antal": 4,
+    "enhet": "för",
+    "jamforpris": "15:15/liter + pant",
+    "sida": 11,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Energidryck Red Bull",
+    "pris": 22,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "44:00/liter + pant",
+    "sida": 11,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Diskduk Fixa",
+    "pris": 25,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "3:13/st",
+    "sida": 12,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Fryspåsar Fixa",
+    "pris": 28,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "0:35-0:47/st",
+    "sida": 12,
+    "giltig": "5–11 oktober"
+  },
+  {
+    "produkt": "Avfallspåse Fixa",
+    "pris": 35,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "0:70/st",
+    "sida": 12,
+    "giltig": "5–11 oktober"
+  }
+]

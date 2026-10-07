@@ -1,0 +1,412 @@
+[
+  {
+    "produkt": "Färsk fläskytterfilé",
+    "pris": 65,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Satsumas",
+    "pris": 20,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Morötter/palsternacka/gul lök",
+    "pris": 10,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "10-20:00/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Svenskt smör Arla",
+    "pris": 45,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "90:00/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Krossade tomater Cirio",
+    "pris": 25,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "32:05/kg",
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Läsk 6-pack Pepsi/Zingo",
+    "pris": 59,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "14:90/liter + pant",
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Pizza Tony's",
+    "pris": 99,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": null,
+    "sida": 1,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Färsk skinkstek",
+    "pris": 89,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Stekfläsk Tulip",
+    "pris": 47.5,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "126:67/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Fina torskfiléer 3-pack Findus",
+    "pris": 99,
+    "antal": 1,
+    "enhet": "förp",
+    "jamforpris": "264:00/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Kalkonbröstfilé Ingelsta Kalkon",
+    "pris": 179,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Korv Gol",
+    "pris": 79,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "105:33/kg",
+    "sida": 2,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Broccoli",
+    "pris": 26,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "52:00/kg",
+    "sida": 3,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Ekologiska färska kryddor Änglamark",
+    "pris": 15,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": null,
+    "sida": 3,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Tomater Sverige",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 3,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Rosor 9-pack Fairtrade",
+    "pris": 69.9,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": null,
+    "sida": 3,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Färsk pasta Coop",
+    "pris": 49,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "49-98:00/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Pastasås Coop",
+    "pris": 30,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "38:46/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Små delikatessköttbullar Felix",
+    "pris": 45,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "107:14/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Matpaj Dafgårds",
+    "pris": 99,
+    "antal": 4,
+    "enhet": "för",
+    "jamforpris": null,
+    "sida": 4,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Vetemjöl Sverige/Coop",
+    "pris": 30,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "7:50/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Pasta korta former Coop",
+    "pris": 35,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "23:33/kg",
+    "sida": 4,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Matlagnings-/vispgrädde Arla Köket",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "50:00/liter",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Ketchup Felix",
+    "pris": 55,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "27:50-28:06/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Kycklingsteak Kronfågel",
+    "pris": 89,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Klassikerost Arla",
+    "pris": 85,
+    "antal": 1,
+    "enhet": "kg",
+    "jamforpris": null,
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Riven ost Arla Köket",
+    "pris": 20,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "133:33/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Nötter OLW",
+    "pris": 35,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "58:33-116:67/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Snacks OLW",
+    "pris": 65,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "78:79-108:33/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Pizzadeg Napoli Popi Bakery",
+    "pris": 39,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "65:00/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Pizzadeg Napoli XXL Popi Bakery",
+    "pris": 25,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": "50:00/kg",
+    "sida": 5,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Smörgåspålägg Jakobsdals",
+    "pris": 49,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "245-306:25/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Hela kaffebönor Arvid Nordquist",
+    "pris": 130,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "130-144:44/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Bredbar pastej Pastejköket",
+    "pris": 22,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "55-73:33/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Fruktdryck Proviva",
+    "pris": 54,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "27:00/liter",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Havregott Axa",
+    "pris": 69,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "98:57/kg",
+    "sida": 6,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Stekpanna 28 cm Köksträdgården",
+    "pris": 149.5,
+    "antal": 1,
+    "enhet": "st",
+    "jamforpris": null,
+    "sida": 7,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Äppelmust Kiviks Musteri",
+    "pris": 48,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "24:00/liter",
+    "sida": 8,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Chokladkakor Fazer",
+    "pris": 50,
+    "antal": 2,
+    "enhet": "för",
+    "jamforpris": "172:41-208:33/kg",
+    "sida": 8,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Energidryck Red Bull",
+    "pris": 33,
+    "antal": 3,
+    "enhet": "för",
+    "jamforpris": "44:00/liter + pant",
+    "sida": 8,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  },
+  {
+    "produkt": "Maskindiskmedel Yes",
+    "pris": 95,
+    "antal": 1,
+    "enhet": "förp",
+    "jamforpris": "1:98-2:50/disk",
+    "sida": 8,
+    "giltig": "5–11 oktober",
+    "butik": "Coop Mårtenstorget, Coop Vildgåsen, Coop Klostergården, Coop Trollebergsvägen"
+  }
+]
