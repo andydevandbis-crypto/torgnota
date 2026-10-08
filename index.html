@@ -39,12 +39,17 @@ body { font-family: "Segoe UI", -apple-system, sans-serif; background: #f1f5f9; 
 .del-list-btn { background: none; border: none; color: #64748b; font-size: 22px; cursor: pointer; padding: 8px; }
 .del-list-btn:hover { color: #dc2626; }
 
-.omrade-piller { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 20px; }
-.omrade-piller button { padding: 10px 4px; border: 2px solid #cbd5e1; background: #fff; border-radius: 16px; font-size: 11px; cursor: pointer; font-weight: 600; color: #0f172a; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.butik-toggle { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 12px 16px; margin-bottom: 10px; background: #fff; border: 2px solid #cbd5e1; border-radius: 10px; font-size: 15px; font-weight: 600; color: #0f172a; cursor: pointer; text-align: left; }
+.butik-toggle .sammanfattning { font-weight: 400; color: #475569; margin-left: 8px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.butik-toggle .pil { transition: transform .15s; }
+.butik-toggle.open .pil { transform: rotate(180deg); }
+.omrade-piller { display: none; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.omrade-piller.open { display: flex; }
+.omrade-piller button { padding: 8px 14px; border: 2px solid #cbd5e1; background: #fff; border-radius: 16px; font-size: 13px; cursor: pointer; font-weight: 600; color: #0f172a; white-space: nowrap; }
 .omrade-piller button.active { background: #0f766e; color: #fff; border-color: #0f766e; }
 
-.kat-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 16px; }
-.kat-knapp { padding: 8px 12px; background: #fff; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; text-align: center; transition: all .15s; }
+.kat-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; position: sticky; top: 0; z-index: 5; background: #f1f5f9; padding: 8px 0; }
+.kat-knapp { flex: 0 0 auto; padding: 8px 14px; background: #fff; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; text-align: center; transition: all .15s; }
 .kat-knapp:hover { border-color: #0f766e; }
 .kat-knapp.active { background: #0f766e; color: #fff; border-color: #0f766e; }
 .kat-knapp .namn { font-size: 13px; font-weight: 600; line-height: 1.2; }
@@ -54,6 +59,7 @@ body { font-family: "Segoe UI", -apple-system, sans-serif; background: #f1f5f9; 
 .erbjudande-lista { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
 .erbjudande { padding: 16px 20px; background: #fff; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .erbjudande:hover { border-color: #0f766e; background: #f0fdfa; }
+.erbjudande.tillagd { border-color: #0f766e; background: #f0fdfa; }
 .erbjudande .info { flex: 1; min-width: 0; }
 .erbjudande .namn { font-size: 17px; font-weight: 600; line-height: 1.3; }
 .erbjudande .meta { font-size: 15px; color: #0f172a; margin-top: 4px; line-height: 1.4; }
@@ -95,7 +101,8 @@ body { font-family: "Segoe UI", -apple-system, sans-serif; background: #f1f5f9; 
 
 @media (max-width: 768px) {
   .container { padding: 16px; }
-  .kat-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .kat-grid { flex-wrap: nowrap; overflow-x: auto; gap: 6px; margin-left: -16px; margin-right: -16px; padding: 8px 16px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .kat-grid::-webkit-scrollbar { display: none; }
   .kat-knapp { padding: 8px 6px; }
   .kat-knapp .namn { font-size: 12px; line-height: 1.15; }
   .kat-knapp .antal { font-size: 10px; }
@@ -131,6 +138,7 @@ body { font-family: "Segoe UI", -apple-system, sans-serif; background: #f1f5f9; 
       <button class="back-btn" onclick="tillbaka()">&#8592;</button>
       <h2>Aktuella erbjudanden</h2>
     </div>
+    <button class="butik-toggle" id="butikToggle" onclick="vaxlaButiker()"><span>Butiker</span><span class="sammanfattning" id="butikSammanfattning">Alla</span><span class="pil">&#9662;</span></button>
     <div class="omrade-piller" id="omradePiller"></div>
     <div class="kat-grid" id="katGrid"></div>
     <div class="erbjudande-lista" id="erbjudandeLista"></div>
@@ -240,6 +248,17 @@ function extraheraOmrade(butik) {
   return "";
 }
 
+function vaxlaButiker() {
+  document.getElementById("omradePiller").classList.toggle("open");
+  document.getElementById("butikToggle").classList.toggle("open");
+}
+
+function uppdateraButikSammanfattning() {
+  const v = [...valdaOmraden];
+  document.getElementById("butikSammanfattning").textContent =
+    v.length === 0 ? "Alla" : v.length <= 2 ? v.join(", ") : v.length + " valda";
+}
+
 function ritaOmradesPiller() {
   const butiker = [...new Set(erbjudanden.map(e => e.butik))].filter(x => x).sort();
   const container = document.getElementById("omradePiller");
@@ -257,6 +276,7 @@ function ritaOmradesPiller() {
     };
     container.appendChild(btn);
   });
+  uppdateraButikSammanfattning();
 }
 
 function kategoriSynliga() {
@@ -312,7 +332,8 @@ function ritaErbjudanden() {
     const jamfor = e.jamforpris ? " · " + e.jamforpris : "";
     const giltig = e.giltig ? " · " + e.giltig : "";
     rad.innerHTML = '<div class="info"><div class="namn">' + e.produkt + '</div><div class="meta">' + e.butik + giltig + jamfor + '</div></div><div class="pris">' + prisText + '</div>';
-    rad.onclick = () => laggTillErbjudande(e);
+    rad.onclick = (ev) => laggTillErbjudande(e, ev);
+    if (arRedanTillagd(e)) rad.classList.add("tillagd");
     container.appendChild(rad);
   });
   ritaBottenNav();
@@ -340,8 +361,16 @@ function ritaBottenNav() {
   };
 }
 
-function laggTillErbjudande(e) {
+function arRedanTillagd(e) {
   const listnamn = matchaListnamn(e.butik);
+  if (!allLists[listnamn]) return false;
+  const kat = allLists[listnamn].data[e.kategori];
+  return kat && kat[e.produkt];
+}
+
+function laggTillErbjudande(e, ev) {
+  const listnamn = matchaListnamn(e.butik);
+  if (ev) ev.currentTarget.classList.add("tillagd");
   if (!allLists[listnamn]) allLists[listnamn] = { data: {}, itemStates: {}, openCategories: new Set() };
   const kategori = e.kategori;
   if (!allLists[listnamn].data[kategori]) allLists[listnamn].data[kategori] = {};
@@ -522,8 +551,10 @@ function renderShop() {
       del.className = "delete-btn"; del.textContent = "\u2715";
       del.onclick = (e) => {
         e.stopPropagation();
-        delete data[cat][key];
+        const d = allLists[currentShop].data;
+        if (d && d[cat]) { delete d[cat][key]; }
         delete itemStates[stateKey];
+        saveLists();
         renderShop();
       };
       itemDiv.appendChild(del);
