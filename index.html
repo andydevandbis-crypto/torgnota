@@ -90,6 +90,8 @@ body { font-family: "Segoe UI", -apple-system, sans-serif; background: #f1f5f9; 
 .item { display: flex; align-items: center; gap: 12px; padding: 10px 8px; border-radius: 8px; }
 .item input[type="checkbox"] { width: 24px; height: 24px; accent-color: #0f766e; cursor: pointer; flex-shrink: 0; }
 .item .qty { background: #f1f5f9; padding: 3px 10px; border-radius: 6px; font-size: 14px; color: #0f172a; }
+.item .qty-btn { padding: 4px 10px; background: none; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 12px; color: #475569; cursor: pointer; font-family: inherit; }
+.item .qty-btn:hover { border-color: #0f766e; color: #0f766e; }
 .item .name { flex: 1; font-size: 17px; }
 .item .name.done { text-decoration: line-through; color: #64748b; }
 .item .delete-btn { background: none; border: none; color: #64748b; font-size: 20px; cursor: pointer; padding: 4px; }
@@ -129,7 +131,7 @@ body { font-family: "Segoe UI", -apple-system, sans-serif; background: #f1f5f9; 
       <p class="sub">Skapa eller redigera en lista</p>
       <button class="btn-erbjudanden" onclick="visaErbjudanden()">Aktuella erbjudanden</button>
       <div class="new-list-box">
-        <input type="text" id="newListName" placeholder="Skriv listans namn...">
+        <input type="text" id="newListName" placeholder="Butikens namn...">
         <button onclick="skapaNyLista()">Skapa lista</button>
       </div>
       <div class="saved-lists">
@@ -217,9 +219,23 @@ function visaToast(text) {
 }
 
 function matchaListnamn(butik) {
-  const ord = normalisera(butik).split(" ").sort().join(" ");
+  const rensa = (s) => normalisera(s)
+    .replace(/\b(ica|coop|supermarket|nära|maxi|kvantum|stora|nara)\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const butikRensad = rensa(butik);
+
   for (const namn of Object.keys(allLists)) {
-    if (normalisera(namn).split(" ").sort().join(" ") === ord) return namn;
+    if (normalisera(namn) === normalisera(butik)) return namn;
+  }
+  for (const namn of Object.keys(allLists)) {
+    const namnRensad = rensa(namn);
+    if (namnRensad === butikRensad) return namn;
+  }
+  for (const namn of Object.keys(allLists)) {
+    const namnRensad = rensa(namn);
+    if (namnRensad && butikRensad && (namnRensad.includes(butikRensad) || butikRensad.includes(namnRensad))) return namn;
   }
   return butik;
 }
@@ -598,6 +614,19 @@ function renderShop() {
       const qty = document.createElement("span");
       qty.className = "qty"; qty.textContent = items[key];
       itemDiv.appendChild(qty);
+      const andraQtyBtn = document.createElement("button");
+      andraQtyBtn.className = "qty-btn";
+      andraQtyBtn.textContent = "Ändra antal";
+      andraQtyBtn.onclick = (e) => {
+        e.stopPropagation();
+        const nu = allLists[currentShop].data[cat][key] || "1 st";
+        const nytt = prompt("Nytt antal:", nu);
+        if (nytt !== null) {
+          allLists[currentShop].data[cat][key] = nytt.trim() || "1 st";
+          renderShop();
+        }
+      };
+      itemDiv.appendChild(andraQtyBtn);
       const nm = document.createElement("span");
       nm.className = "name" + (checked ? " done" : "");
       nm.textContent = key;
