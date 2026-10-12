@@ -236,7 +236,14 @@ async function laddaErbjudanden() {
 
 async function visaErbjudanden() {
   visaSida("offerPage");
-  if (!erbjudanden.length) await laddaErbjudanden();
+  const tomt = document.getElementById("tomtMeddelande");
+  const grid = document.getElementById("katGrid");
+  if (!erbjudanden.length) {
+    tomt.style.display = "block";
+    tomt.textContent = "Laddar erbjudanden...";
+    grid.innerHTML = "";
+    await laddaErbjudanden();
+  }
   ritaOmradesPiller();
   ritaKategoriGrid();
   ritaErbjudanden();
@@ -344,6 +351,7 @@ function ritaErbjudanden() {
   if (!valdKategori) {
     container.innerHTML = "";
     tomt.style.display = "block";
+    tomt.textContent = "Välj en kategori ovan.";
     ritaBottenNav();
     return;
   }
