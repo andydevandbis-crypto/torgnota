@@ -57,12 +57,13 @@ body { font-family: "Segoe UI", -apple-system, sans-serif; background: #f1f5f9; 
 .kat-knapp.active .antal { color: rgba(255,255,255,0.85); }
 
 .erbjudande-lista { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
-.erbjudande { padding: 16px 20px; background: #fff; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.erbjudande { padding: 16px 20px; background: #fff; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
 .erbjudande:hover { border-color: #0f766e; background: #f0fdfa; }
 .erbjudande.tillagd { border-color: #0f766e; background: #f0fdfa; }
 .erbjudande .info { flex: 1; min-width: 0; }
-.erbjudande .namn { font-size: 17px; font-weight: 600; line-height: 1.3; }
-.erbjudande .meta { font-size: 15px; color: #0f172a; margin-top: 4px; line-height: 1.4; }
+.erbjudande .namn { font-size: 17px; font-weight: 600; line-height: 1.3; margin-bottom: 6px; }
+.erbjudande .meta { font-size: 13px; color: #475569; line-height: 1.6; }
+.erbjudande .meta b { font-weight: 600; color: #0f172a; }
 .erbjudande .pris { font-size: 20px; font-weight: 700; white-space: nowrap; color: #0f766e; }
 
 .botten-nav { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 20px 0; margin-bottom: 24px; }
@@ -106,9 +107,14 @@ body { font-family: "Segoe UI", -apple-system, sans-serif; background: #f1f5f9; 
   .kat-knapp { padding: 8px 6px; }
   .kat-knapp .namn { font-size: 12px; line-height: 1.15; }
   .kat-knapp .antal { font-size: 10px; }
-  .erbjudande { padding: 12px; }
-  .erbjudande .namn { font-size: 15px; }
-  .erbjudande .pris { font-size: 18px; }
+  .erbjudande { padding: 16px 20px; background: #fff; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.erbjudande:hover { border-color: #0f766e; background: #f0fdfa; }
+.erbjudande.tillagd { border-color: #0f766e; background: #f0fdfa; }
+.erbjudande .info { flex: 1; min-width: 0; }
+.erbjudande .namn { font-size: 17px; font-weight: 600; line-height: 1.3; margin-bottom: 6px; }
+.erbjudande .meta { font-size: 13px; color: #475569; line-height: 1.6; }
+.erbjudande .meta b { font-weight: 600; color: #0f172a; }
+.erbjudande .pris { font-size: 20px; font-weight: 700; white-space: nowrap; color: #0f766e; }
 }
 </style>
 </head>
@@ -308,6 +314,30 @@ function ritaKategoriGrid() {
   });
 }
 
+function formatPris(n) {
+  if (n === null || n === undefined) return "";
+  const heltal = Math.floor(n);
+  const decimal = Math.round((n - heltal) * 100);
+  if (decimal === 0) return heltal + ":-";
+  return heltal + "," + String(decimal).padStart(2, "0") + ":-";
+}
+
+function formatPris(n) {
+  if (n === null || n === undefined) return "";
+  const heltal = Math.floor(n);
+  const decimal = Math.round((n - heltal) * 100);
+  if (decimal === 0) return heltal + ":-";
+  return heltal + "," + String(decimal).padStart(2, "0") + ":-";
+}
+
+function formatPris(n) {
+  if (n === null || n === undefined) return "";
+  const heltal = Math.floor(n);
+  const decimal = Math.round((n - heltal) * 100);
+  if (decimal === 0) return heltal + ":-";
+  return heltal + "," + String(decimal).padStart(2, "0") + ":-";
+}
+
 function ritaErbjudanden() {
   const container = document.getElementById("erbjudandeLista");
   const tomt = document.getElementById("tomtMeddelande");
@@ -328,18 +358,27 @@ function ritaErbjudanden() {
   lista.forEach(e => {
     const rad = document.createElement("div");
     rad.className = "erbjudande";
-    const prisText = e.antal > 1 ? e.antal + " för " + e.pris + ":-" : e.pris + ":-";
-    let detaljer = [];
-    if (e.varumarke) detaljer.push(e.varumarke);
-    if (e.vikt) detaljer.push(e.vikt);
-    if (e.ursprung) detaljer.push(e.ursprung);
-    if (e.jamforpris) detaljer.push(e.jamforpris);
-    if (e.kampanjtext) detaljer.push(e.kampanjtext);
-    if (e.max_per_hushall) detaljer.push("Max " + e.max_per_hushall + "/hushåll");
-    if (e.medlemspris) detaljer.push("Medlemspris");
-    const detaljRad = detaljer.length ? '<div class="meta">' + detaljer.join(" · ") + '</div>' : "";
-    const butikRad = '<div class="meta">' + e.butik + (e.giltig ? " · " + e.giltig : "") + '</div>';
-    rad.innerHTML = '<div class="info"><div class="namn">' + e.produkt + '</div>' + detaljRad + butikRad + '</div><div class="pris">' + prisText + '</div>';
+    const prisText = e.antal > 1 ? e.antal + " för " + formatPris(e.pris) : formatPris(e.pris);
+
+    let titel = e.produkt;
+    if (e.varumarke && !e.produkt.toLowerCase().includes(e.varumarke.toLowerCase())) {
+      titel = e.varumarke + ' ' + e.produkt;
+    }
+
+    const rader = [];
+    const extra = [];
+    if (e.vikt) extra.push(e.vikt);
+    if (e.ursprung) extra.push(e.ursprung);
+    if (extra.length) rader.push(extra.join(" · "));
+    if (e.jamforpris) rader.push(e.jamforpris);
+    if (e.max_per_hushall) rader.push("Max " + e.max_per_hushall + "/hushåll");
+    if (e.medlemspris) rader.push("<b>Medlemspris</b>");
+    rader.push(e.butik + (e.giltig ? " · " + e.giltig : ""));
+
+    const html = '<div class="info"><div class="namn">' + titel + '</div>' +
+                 rader.map(r => '<div class="meta">' + r + '</div>').join('') +
+                 '</div><div class="pris">' + prisText + '</div>';
+    rad.innerHTML = html;
     rad.onclick = (ev) => laggTillErbjudande(e, ev);
     if (arRedanTillagd(e)) rad.classList.add("tillagd");
     container.appendChild(rad);
