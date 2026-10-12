@@ -3,3 +3,11 @@
 .env
 uploads_reklam/
 uploads_reklam_pdf/
+
+# Scraping - stora PDF:er, hör inte i git
+scraping_test/
+coop_store_ids.txt
+
+# Scraping - stora PDF:er, hör inte i git
+scraping_test/
+coop_store_ids.txt
