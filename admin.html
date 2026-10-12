@@ -131,17 +131,21 @@ let produkter = [];
 let aktivFlik = "attgora";
 let sokText = "";
 const NYCKELORD = {
-  "Hushåll": ["diskmedel","maskindiskmedel","avfallspåse","fryspåse","plastpåse","hushållsduk","städservett","skrubb","rengöring","toalettpapper","hushållspapper","tvättmedel","sköljmedel","sopsäck","allrengöring"],
-  "Kök": ["stekpanna","kastrull","kniv","skärbräda","matförvaring","köksredskap","grytlapp","förkläde","skål","dricksglas","sopset","dammsugare","kolsyremaskin","kabinväska"],
-  "Chark & Pålägg": ["skinka","skinkstek","bacon","prosciutto","pancetta","chark","salami","fuet","pastej","leverpastej","smörgåspålägg","pålägg","kalkon","wienerkorv","grillkorv","stekfläsk","mignon","salsiccia","chorizo","kryddkorv","kassler"],
-  "Kött & Fisk": ["kött","köttfärs","blandfärs","fläsk","fläskfilé","fläskfärs","fläskytterfilé","fläskkarré","grytbitar","biff","pepparbiff","kotlett","schnitzel","kyckling","kycklingsteak","kebab","nuggets","burgare","korv","fisk","torsk","lax","räkor","köttbullar","cevapcici","fransyska","kalvfärs","lammracks","pulled","högrev","entrecôte","lövbiff","älgstek","fläsklägg","skinkstek","hamburgare","minutfilé","högrevsburgare","torskrygg","fiskburgare","lubb","uer","havskräftor"],
-  "Dryck": ["läsk","juice","kaffe","kaffebönor","ikaffe","energidryck","fruktdryck","must","äppelmust","vatten","öl","vin","saft","pellegrino","cola","coca","iste","cider","kombucha","lemonad","folköl","bärdryck","smoothie"],
-  "Bröd & Bageri": ["bröd","polarbröd","polarpärlan","kaka","kakor","bulle","tortilla","tacos","kex","twist","knäcke","ciabatta","pizzadeg","pannkakor","pane","lingongrova","guldkorn","jubileumsbröd","pågenlimpan","rosta","sirapsslimpa","surdegsbröd","havrefralla","kebabbröd","pirog","korvbröd","jallekaka"],
-  "Fryst": ["fryst","glass","pizza","grandiosa","enportion","matpaj","färdigrätt","dumplings","asia box","sötpotatis strips"],
-  "Skafferi": ["pasta","ris","sås","såser","soppa","olja","rapsolja","olivolja","protein","profeel","milkshake","pudding","mousse","hummus","ketchup","vetemjöl","mjöl","pesto","agave","matvete","gräddsås","müsli","flingor","honung","sirap","sylt","krossade","passerade","gnocchi","kakao","florsocker","rörsocker","majs","vinbärsgelé","bönor","kikärtor","linser","nudlar","basmatiris","jasminris","potatisgratäng","tortilla","tacås","salsa","pasta sauce","mascarpone","parmigiano"],
-  "Snacks & Godis": ["chips","cochips","popcorn","snacks","nötter","choklad","godis","snickers","mars","bounty","twix","tuggummi","bars","proteinbars","kondisrullar","toffifee","nutella","smash","bilar","lakrits","tutti frutti","biscoff","valnötter","cashew","ostbågar","skumtoppar","cookies"],
-  "Mejeri & Ost": ["mjölk","mjölkdryck","laktosfri","yoghurt","kefir","grädde","gräddfil","smör","margarin","ost","hårdost","hushållsost","klassikerost","mozzarella","ägg","kvarg","filmjölk","havregott","gårdsgoda","creme","crème","vispgrädde","matgrädde","turkkis","brie","gouda","maasdamer","gruyère","bondost","délice"],
-  "Frukt & Grönt": ["äpple","äpplen","banan","tomat","tomater","gurka","paprika","sallad","morot","morötter","palsternacka","potatis","sötpotatis","lök","plommon","avokado","satsumas","frukt","kaktus","pumpa","broccoli","brysselkål","champinjon","surkål","betor","krydd","kryddor","druvor","aubergine","citron","päron","kiwi","blåbär","hallon","mango","fikon","rotselleri","rödbeta","vitkål","kålrot","romanticatomater","babylommontomater","grönkål","basilika","koriander","timjan","majs"]
+  "Hushåll": ["diskmedel","maskindiskmedel","avfallspåse","fryspåse","plastpåse","hushållsduk","städservett","skrubb","rengöring","toalettpapper","hushållspapper","tvättmedel","sköljmedel","sopsäck","allrengöring","dammvippa","klädvårdsrulle","toalettrengöring","disktrasa","tvål","handtvål","deo","schampo","balsam","dusch","tandkräm","tandborste","tandtråd","batterier","ljuslinga","led-lampa","led-ljus","led","reflex","pläd","matta","dörrmatta"],
+  "Kök": ["stekpanna","kastrull","kniv","skärbräda","matförvaring","köksredskap","grytlapp","förkläde","skål","dricksglas","kolsyremaskin","matlåda","kronljus","gjutjärnsgryta","köksassistent","multimixer","brödrost","brödburk","stavmixer","vattenkokare","termosflaska","espressomaskin","kapslar"],
+  "Chark & Pålägg": ["skinka","skinkstek","bacon","prosciutto","pancetta","chark","salami","fuet","pastej","leverpastej","smörgåspålägg","pålägg","kalkon","wienerkorv","grillkorv","stekfläsk","mignon","salsiccia","chorizo","kryddkorv","kassler","falukorv","prinskorv","medwurst","mortadella","antipasti","salsicciafärs","tunnskivad","tunna skivor","skivad","rökt skinka","långkokt","lättröt","kaviar","rom"],
+  "Kött & Fisk": ["kött","köttfärs","blandfärs","fläsk","fläskfilé","fläskfärs","fläskytterfilé","fläskkarré","grytbitar","biff","pepparbiff","kotlett","schnitzel","kyckling","kycklingsteak","kebab","nuggets","burgare","korv","fisk","torsk","lax","räkor","köttbullar","cevapcici","fransyska","kalvfärs","lammracks","pulled","högrev","entrecôte","lövbiff","älgstek","fläsklägg","hamburgare","minutfilé","högrevsburgare","torskrygg","fiskburgare","lubb","uer","havskräftor","nötfärs","nötstek","nötkött","sidfläsk","karré","revben","spare ribs","flankstek","köttbitar","hjortfärs","hjortgrytkött","kycklingbröst","kycklinglår","kycklingfilé","kycklinginälvor","köttfärsburgare","kebabfärs","bolognese","färs","fiskpinnar","fish","crisp","laxfilé","varmrökt"],
+  "Dryck": ["läsk","juice","kaffe","kaffebönor","ikaffe","energidryck","fruktdryck","must","äppelmust","vatten","öl","vin","saft","pellegrino","cola","coca","iste","cider","kombucha","lemonad","folköl","bärdryck","smoothie","sodastream","milkshake","kaffekapslar","kaffekapsel","espresso","nescafé","lavazza","dolce gusto","cuba cola","trocadero","pommac","zingo","pepsi","sprite","fanta","schweppes","bravo","tropicana","granini","cedrata","havredryck","havremjölk"],
+  "Bröd & Bageri": ["bröd","polarbröd","polarpärlan","kaka","kakor","bulle","tortilla","tacos","kex","twist","knäcke","ciabatta","pizzadeg","pannkakor","pane","lingongrova","guldkorn","jubileumsbröd","pågenlimpan","rosta","sirapsslimpa","surdegsbröd","havrefralla","kebabbröd","pirog","korvbröd","jallekaka","hönökaka","lantbröd","källarfranska","baguette","croissant","muffins","donuts","tortillachips","nachochips","wasa","knäckebröd","skogaholm","varsågod","skogaholmslimpa","norrlands","leväjn","jubileumskaka","polarkaka","originalrost","fiberrost"],
+  "Fryst": ["fryst","glass","pizza","grandiosa","enportion","matpaj","färdigrätt","dumplings","asia box","sötpotatis strips","pan pizza","minipizza","billys","gorbys","trattoria","lasagne","fish & crisp","fiskpinnar","färdigrätter","potatisfigurer","potatisshapes","nuggets halloween"],
+  "Skafferi": ["pasta","ris","sås","såser","soppa","olja","rapsolja","olivolja","protein","profeel","pudding","mousse","hummus","ketchup","vetemjöl","mjöl","pesto","agave","matvete","gräddsås","müsli","flingor","honung","sirap","sylt","krossade","passerade","gnocchi","kakao","florsocker","rörsocker","majs","vinbärsgelé","bönor","kikärtor","linser","nudlar","basmatiris","jasminris","potatisgratäng","tacås","salsa","pasta sauce","mascarpone","parmigiano","couscous","quinoa","buljong","fond","majonnäs","bearnaise","aioli","marmelad","ajvar","dressing","senap","salt","peppar","kryddor","krydda","vaniljsocker","bakpulver","jäst","kokosmjölk","kokosolja","tikka masala","butter chicken","curry","teriyaki","sweet chili","soja","fisksås","majsstärkelse","brödsirap","clementin","tranbär","mullbär","russin","dadlar","cashew","mandel","valnötter","jordnötter","chilinötter","tranbär","pesto"],
+  "Snacks & Godis": ["chips","cochips","popcorn","snacks","nötter","choklad","godis","snickers","mars","bounty","twix","tuggummi","bars","proteinbars","kondisrullar","toffifee","nutella","smash","bilar","lakrits","tutti frutti","biscoff","valnötter","cashew","ostbågar","skumtoppar","cookies","kanelbulle","donuts","muffins","chokladkakor","marabou","haribo","fazer","palle kuling","kexchoklad","proteinbar","swebar","barebells","milkshake","ostkaka","chokladpulver","chokladflingor","godispåsar","godiständer","mjölkchoklad","sockervadd","jordnötsbågar","pepparkakor","lussekatter","kaka"],
+  "Mejeri & Ost": ["mjölk","mjölkdryck","laktosfri","yoghurt","kefir","grädde","gräddfil","smör","margarin","ost","hårdost","hushållsost","klassikerost","mozzarella","ägg","kvarg","filmjölk","havregott","gårdsgoda","creme","crème","vispgrädde","matgrädde","turkkis","brie","gouda","maasdamer","gruyère","bondost","délice","mjukost","färskost","feta","halloumi","grillost","chèvre","parmesan","grana padano","pecorino","ricotta","mascarpone","skinkost","räkost","kaviar","smetana","crème fraiche","creme fraiche","yoghurt vanilj","drickyoghurt","mjölkfritt","havregott","smör & raps","lätta","bregott","valio","arla","skånemejerier","norrmejerier","ägg 15-pack","ägg frigående","ägg lantägg","skånska ägg"],
+  "Frukt & Grönt": ["äpple","äpplen","banan","tomat","tomater","gurka","paprika","sallad","morot","morötter","palsternacka","potatis","sötpotatis","lök","plommon","avokado","satsumas","frukt","kaktus","pumpa","broccoli","brysselkål","champinjon","surkål","betor","krydd","kryddor","druvor","aubergine","citron","päron","kiwi","blåbär","hallon","mango","fikon","rotselleri","rödbeta","vitkål","kålrot","romanticatomater","babylommontomater","grönkål","basilika","koriander","timjan","majs","purjolök","salladslök","bladpersilja","persilja","dill","gräslök","ingefära","vitlök","chili","spenat","mangold","zucchini","squash","butternutpumpa","halloweenpumpa","snackpaprika","cocktailtomater","körsbärstomater","granatäpple","lime","honungspomelo","clementin","apelsin","nektarin","persika","jordgubbe","björnbär","krusbär","vinbär","kål","rödkål","grönkål","isbergssallad","romansallad","ruccola","mâche","späda blad","rädisa","pepparrot","selleri","fänkål","dadel","druva","bananer"],
+  "Husdjur": ["kattfoder","kattmat","kattmjölk","kattgodis","kattsnack","kattsand","kattmatta","kattbädd","klösträd","kattleksak","hundmat","hundfoder","hundgodis","hundbädd","hundleksaker","hundklädsel","pälsborste","rullkoppel","katt","hund","kattmat i gelé","hundmat smart","max & mila"],
+  "Baby & Barn": ["blöjor","blöja","babytvätt","babyschampo","badvättservetter","våtservetter","klämmisar","fruktstång","barnmat","barnservis","barnsäng","pysselbok","maskeraddräkt","pyjamas","strumpor","termobyxor","termotröja","termojeggins","termoleggings","trosor","kalsonger","sittgrupp","sittlåda","jordglob","skrivplatta","lupilu","esmara kids","pepperts","minions","leksak","gosedjur","badrock","denimjoggers","sweatpullover","mjuckisbyxor"],
+  "Blommor & Växter": ["rosor","bukett","blommor","krukrosor","krysantemum","ljung","klockljung","höststjärna","dracaena","euphorbia","växter","växt","blomma","blomster","hortensia","tulpaner","fairtrade rosor","fairtrade bukett"],
+  "Verktyg & Trädgård": ["vinkelslip","vinkelslipstillbehör","fuktmätare","infrarödtermometer","lödkolv","skjutmått","arbetslampa","handcirkelsåg","parkside","borrmaskin","skruvdragare","såg","hammare","skruvmejsel","tång","skiftnyckel","spade","kratta","trädgårdsslang","gräsklippare","häcksax","lövblås"]
 };
 
 
@@ -163,14 +167,11 @@ function visaAdmin(d) {
   produkter = (d.items || []).map(p => {
     let kat = kategoriData.assignments[nyckel(p.produkt)];
     if (!kat) {
-      const ord = nyckel(p.produkt).split(/[\s,.\-&()\/:]+/).filter(w => w.length > 0);
+      const full = nyckel(p.produkt);
+      const ord = full.split(/[\s,.\-&()\/:]+/).filter(w => w.length > 0);
       outer: for (const [k, nyckelord] of Object.entries(NYCKELORD)) {
         for (const nk of nyckelord) {
-          for (const o of ord) {
-            if (o === nk || o.startsWith(nk) || (nk.length >= 5 && o.includes(nk))) {
-              kat = k; break outer;
-            }
-          }
+          if (full.includes(nk)) { kat = k; break outer; }
         }
       }
     }
@@ -383,14 +384,11 @@ async function laddaOm() {
   produkter = (d.items || []).map(p => {
     let kat = kategoriData.assignments[nyckel(p.produkt)];
     if (!kat) {
-      const ord = nyckel(p.produkt).split(/[\s,.\-&()\/:]+/).filter(w => w.length > 0);
+      const full = nyckel(p.produkt);
+      const ord = full.split(/[\s,.\-&()\/:]+/).filter(w => w.length > 0);
       outer: for (const [k, nyckelord] of Object.entries(NYCKELORD)) {
         for (const nk of nyckelord) {
-          for (const o of ord) {
-            if (o === nk || o.startsWith(nk) || (nk.length >= 5 && o.includes(nk))) {
-              kat = k; break outer;
-            }
-          }
+          if (full.includes(nk)) { kat = k; break outer; }
         }
       }
     }
